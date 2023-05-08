@@ -28,7 +28,9 @@ public class Kategorija implements Idable{
 
     @Override
     public String toString() {
-        return ime;
+        return "Kategorija {" +
+                "ime = '" + ime + '\'' +
+                '}';
     }
 
     @Override

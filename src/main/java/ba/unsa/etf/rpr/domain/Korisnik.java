@@ -72,12 +72,12 @@ public class Korisnik implements Idable {
 
     @Override
     public String toString() {
-        return "Korisnik{" +
-                ", ime='" + ime + '\'' +
-                ", prezime='" + prezime + '\'' +
-                ", adresa='" + adresa + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
+        return "Korisnik {" +
+                ", ime = '" + ime + '\'' +
+                ", prezime = '" + prezime + '\'' +
+                ", adresa = '" + adresa + '\'' +
+                ", email = '" + email + '\'' +
+                ", password = '" + password + '\'' +
                 '}';
     }
 
