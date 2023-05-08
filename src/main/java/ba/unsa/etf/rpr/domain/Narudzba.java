@@ -7,12 +7,10 @@ public class Narudzba implements Idable{
     private float cijena;
     private Korisnik korisnik;
 
-    @Override
     public int getId() {
         return id;
     }
 
-    @Override
     public void setId(int id) {
         this.id = id;
     }
