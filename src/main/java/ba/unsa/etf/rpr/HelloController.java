@@ -1,4 +1,4 @@
-package com.example.rpr_projekat_2023;
+package ba.unsa.etf.rpr;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
