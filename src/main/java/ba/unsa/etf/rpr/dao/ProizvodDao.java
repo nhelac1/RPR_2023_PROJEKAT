@@ -1,4 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
-public interface ProizvodDao {
+import ba.unsa.etf.rpr.domain.Proizvod;
+
+public interface ProizvodDao extends Dao<Proizvod> {
 }
