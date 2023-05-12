@@ -18,7 +18,7 @@ public class KategorijaDaoSQLImpl implements KategorijaDao {
 
     @Override
     public Kategorija getById(int id) {
-        String query = "SELECT * FROM categories WHERE id = ?";
+        String query = "SELECT * FROM Kategorija WHERE id = ?";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);

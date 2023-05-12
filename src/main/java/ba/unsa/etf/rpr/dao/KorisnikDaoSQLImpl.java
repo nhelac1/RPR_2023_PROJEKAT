@@ -21,7 +21,7 @@ public class KorisnikDaoSQLImpl implements KorisnikDao {
     @Override
     public Korisnik getById(int id){
 
-        String query = "SELECT * FROM users WHERE id = ?";
+        String query = "SELECT * FROM Korisnik WHERE id = ?";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
