@@ -1,8 +1,9 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.NarudzbaProizvod;
 import ba.unsa.etf.rpr.domain.Proizvod;
-import java.sql.Connection;
-import java.sql.DriverManager;
+
+import java.sql.*;
 import java.util.List;
 
 public class ProizvodDaoSQLImpl implements ProizvodDao {
@@ -18,6 +19,26 @@ public class ProizvodDaoSQLImpl implements ProizvodDao {
 
     @Override
     public Proizvod getById(int id){
+        String query = "SELECT * FROM Proizvod WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()){ // result set is iterator.
+                Proizvod product = new Proizvod();
+                product.setId(rs.getInt("id"));
+                product.setIme(rs.getString("ime"));
+                product.setCijena(rs.getFloat("cijena"));
+                product.setKolicina(rs.getInt("kolicina"));
+                product.setOpis(rs.getString("opis"));
+                rs.close();
+                return product;
+            }else{
+                return null; // if there is no elements in the result set return null
+            }
+        }catch (SQLException e){
+            e.printStackTrace(); // poor error handling
+        }
         return null;
     }
 
