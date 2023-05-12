@@ -25,10 +25,10 @@ public class NarudzbaProizvodDaoSQLImpl implements NarudzbaProizvodDao {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()){ // result set is iterator.
-                NarudzbaProizvod userOrder = new NarudzbaProizvod();
-                userOrder.setId(rs.getInt("id"));
+                NarudzbaProizvod productOrder = new NarudzbaProizvod();
+                productOrder.setId(rs.getInt("id"));
                 rs.close();
-                return userOrder;
+                return productOrder;
             }else{
                 return null; // if there is no elements in the result set return null
             }
