@@ -19,7 +19,7 @@ public class NarudzbaProizvodDaoSQLImpl implements NarudzbaProizvodDao {
 
     @Override
     public NarudzbaProizvod getById(int id){
-        String query = "SELECT * FROM users WHERE id = ?";
+        String query = "SELECT * FROM NarudzbaProizvod WHERE id = ?";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
