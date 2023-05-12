@@ -13,6 +13,9 @@ import ba.unsa.etf.rpr.domain.Korisnik;
 import ba.unsa.etf.rpr.dao.NarudzbaDao;
 import ba.unsa.etf.rpr.dao.NarudzbaDaoSQLImpl;
 import ba.unsa.etf.rpr.domain.Narudzba;
+import ba.unsa.etf.rpr.dao.NarudzbaProizvodDao;
+import ba.unsa.etf.rpr.dao.NarudzbaProizvodDaoSQLImpl;
+import ba.unsa.etf.rpr.domain.NarudzbaProizvod;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
