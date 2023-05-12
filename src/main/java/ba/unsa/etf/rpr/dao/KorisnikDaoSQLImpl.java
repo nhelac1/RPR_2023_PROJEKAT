@@ -1,8 +1,9 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Korisnik;
-import java.sql.Connection;
-import java.sql.DriverManager;
+
+import java.sql.*;
 import java.util.List;
 
 public class KorisnikDaoSQLImpl implements KorisnikDao {
@@ -19,6 +20,28 @@ public class KorisnikDaoSQLImpl implements KorisnikDao {
 
     @Override
     public Korisnik getById(int id){
+
+        String query = "SELECT * FROM users WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()){ // result set is iterator.
+                Korisnik user = new Korisnik();
+                user.setId(rs.getInt("id"));
+                user.setIme(rs.getString("ime"));
+                user.setPrezime(rs.getString("prezime"));
+                user.setAdresa(rs.getString("adresa"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("password"));
+                rs.close();
+                return user;
+            }else{
+                return null; // if there is no elements in the result set return null
+            }
+        }catch (SQLException e){
+            e.printStackTrace(); // poor error handling
+        }
         return null;
     }
 
