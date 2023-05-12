@@ -4,8 +4,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-
+import ba.unsa.etf.rpr.dao.KategorijaDao;
+import ba.unsa.etf.rpr.dao.KategorijaDaoSQLImpl;
+import ba.unsa.etf.rpr.domain.Kategorija;
+import ba.unsa.etf.rpr.dao.KorisnikDao;
+import ba.unsa.etf.rpr.dao.KorisnikDaoSQLImpl;
+import ba.unsa.etf.rpr.domain.Korisnik;
 import java.io.IOException;
 
 public class HelloApplication extends Application {

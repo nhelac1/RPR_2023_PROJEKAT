@@ -1,8 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Korisnik;
-import ba.unsa.etf.rpr.exceptions.CeraVeException;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.List;

@@ -4,9 +4,6 @@ import ba.unsa.etf.rpr.domain.Kategorija;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.List;
-import ba.unsa.etf.rpr.dao.KategorijaDao;
-import ba.unsa.etf.rpr.dao.KategorijaDaoSQLImpl;
-import ba.unsa.etf.rpr.domain.Kategorija;
 
 public class KategorijaDaoSQLImpl implements KategorijaDao {
 
