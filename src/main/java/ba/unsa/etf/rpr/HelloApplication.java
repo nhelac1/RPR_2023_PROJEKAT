@@ -16,6 +16,9 @@ import ba.unsa.etf.rpr.domain.Narudzba;
 import ba.unsa.etf.rpr.dao.NarudzbaProizvodDao;
 import ba.unsa.etf.rpr.dao.NarudzbaProizvodDaoSQLImpl;
 import ba.unsa.etf.rpr.domain.NarudzbaProizvod;
+import ba.unsa.etf.rpr.dao.ProizvodDao;
+import ba.unsa.etf.rpr.dao.ProizvodDaoSQLImpl;
+import ba.unsa.etf.rpr.domain.Proizvod;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
