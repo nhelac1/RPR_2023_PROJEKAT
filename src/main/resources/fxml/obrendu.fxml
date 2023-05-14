@@ -18,7 +18,7 @@
                 <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="45.2" vgrow="ALWAYS" />
                 <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="438.8" vgrow="ALWAYS" />
                 <RowConstraints />
-            <RowConstraints />
+                <RowConstraints />
             </rowConstraints>
             <children>
                 <ImageView fitHeight="93.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
@@ -45,14 +45,14 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPomoc" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" underline="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnPomoc" mnemonicParsing="false" onAction="#actionOtvaranjeHelp" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
                             <padding>
                                 <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                             </padding></Button>
-                        <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="O nama" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnONama" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255)" text="O nama" underline="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
