@@ -14,9 +14,11 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class OBrenduController {
-    public Button btnZatvori;
+    public Button btnZatvori, btnPomoc;
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
+            Stage stage =(Stage)btnPomoc.getScene().getWindow();
+            stage.close();
             Stage stage1 = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/help.fxml"));
             HelpController help = new HelpController();
