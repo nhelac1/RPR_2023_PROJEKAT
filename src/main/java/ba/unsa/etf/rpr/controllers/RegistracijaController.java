@@ -46,6 +46,21 @@ public class RegistracijaController {
             System.out.println(e.getMessage());
         }
     }
+    public void actionRegistrujSe(ActionEvent actionEvent) throws IOException {
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/potvrdaR.fxml"));
+            PotvrdaRegistracijeController potvrda = new PotvrdaRegistracijeController();
+            fxmlLoader.setController(potvrda);
+            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+            stage1.setTitle("CeraVe");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     public void actionOtkazi(ActionEvent actionEvent)
     {
         Stage stage =(Stage)btnOtkazi.getScene().getWindow();
