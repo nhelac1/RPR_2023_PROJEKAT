@@ -17,8 +17,8 @@
             <rowConstraints>
                 <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="53.8" vgrow="ALWAYS" />
                 <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="116.6" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="231.2" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="87.60000000000002" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="208.8" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="105.19999999999999" vgrow="ALWAYS" />
                 <RowConstraints />
                 <RowConstraints />
             </rowConstraints>
@@ -71,7 +71,18 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
-            <Button mnemonicParsing="false" GridPane.rowIndex="3" />
+            <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-border-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font></Button>
+            <Label text="Priča o CeraVeu započela je 2005. godine nakon što su stručnjaci primijetili da mnoga stanja kože poput akni, ekcema, psorijaze i suhe kože imaju jednu zajedničku stvar: narušenu kožnu barijeru. Razvijen u suradnji s dermatolozima, CeraVe nudi cjelovitu liniju proizvoda za njegu kože koji sadrže tri bitna ceramida poboljšana revolucionarnim sustavom isporuke kako bi se obnovila prirodna zaštitna barijera kože." textAlignment="JUSTIFY" textFill="#10006c" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="14.5" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" top="40.0" />
+               </GridPane.margin>
+            </Label>
             </children>
         </GridPane>
     </center>
