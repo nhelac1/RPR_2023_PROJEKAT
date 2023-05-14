@@ -125,7 +125,7 @@
                      <padding>
                         <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                      </padding></Button>
-                  <Button mnemonicParsing="false" onAction="#actionOtvaranjeONama" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="O nama" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="O nama" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font name="Times New Roman" size="15.0" />
                      </font>

@@ -15,6 +15,7 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class PocetnaController {
+    public Button btnONama;
 
     public void actionRegistracija(ActionEvent actionEvent) throws IOException {
         try {
@@ -50,6 +51,8 @@ public class PocetnaController {
 
     public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
         try {
+            /*Stage stage =(Stage)btnONama.getScene().getWindow();
+            stage.close();*/
             Stage stage1 = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/obrendu.fxml"));
             OBrenduController brend = new OBrenduController();
