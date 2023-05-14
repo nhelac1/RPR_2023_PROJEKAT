@@ -139,7 +139,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font name="Times New Roman" size="15.0" />
                      </font>
