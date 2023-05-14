@@ -15,8 +15,10 @@
                 <ColumnConstraints hgrow="ALWAYS" maxWidth="295.0" minWidth="10.0" prefWidth="90.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="45.2" vgrow="ALWAYS" />
-                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="438.8" vgrow="ALWAYS" />
+                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="53.8" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="116.6" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="231.2" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="87.60000000000002" vgrow="ALWAYS" />
                 <RowConstraints />
                 <RowConstraints />
             </rowConstraints>
@@ -69,6 +71,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
+            <Button mnemonicParsing="false" GridPane.rowIndex="3" />
             </children>
         </GridPane>
     </center>

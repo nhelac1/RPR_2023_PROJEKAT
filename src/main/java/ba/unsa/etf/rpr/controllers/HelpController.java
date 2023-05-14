@@ -14,6 +14,7 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class HelpController {
+    public Button btnZatvori;
 
     public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
         try {
@@ -30,7 +31,22 @@ public class HelpController {
             System.out.println(e.getMessage());
         }
     }
+    public void actionZatvori(ActionEvent actionEvent)
+    {
+        Stage stage =(Stage)btnZatvori.getScene().getWindow();
+        stage.close();
+    }
+    @FXML
+    public void promjenaBoje(MouseEvent event) {
+        Button btn = (Button) event.getSource();
+        btn.setStyle("-fx-background-color: rgb(196,196,196); -fx-background-radius:10px;");
+    }
 
+    @FXML
+    public void vracanjeBoje(MouseEvent event) {
+        Button btn = (Button) event.getSource();
+        btn.setStyle("-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;");
+    }
     @FXML
     public void promjenaBoje1(MouseEvent event) {
         Button btn = (Button) event.getSource();

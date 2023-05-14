@@ -15,8 +15,11 @@
                 <ColumnConstraints hgrow="ALWAYS" maxWidth="295.0" minWidth="10.0" prefWidth="90.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="45.2" vgrow="ALWAYS" />
-                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="438.8" vgrow="ALWAYS" />
+                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="54.6" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="121.40000000000002" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="136.20001525878905" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="75.60000000000002" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="110.0" vgrow="ALWAYS" />
                 <RowConstraints />
             <RowConstraints />
             </rowConstraints>
@@ -61,7 +64,7 @@
                             </padding></Button>
                     </children>
                 </GridPane>
-                <GridPane style="-fx-background-color: rgb(3,125,255);" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                <GridPane style="-fx-background-color: rgb(3,125,255);" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="4">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
@@ -69,6 +72,25 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
+            <Label text="Ukoliko imate nekih pitanja o našim proizvodima ili želite preporuku našeg stručnog tima za Vašu skincare rutinu, budite slobodni da nas kontaktirate na e-mail dermatologists@cerave.com" textAlignment="JUSTIFY" textFill="#10006c" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Times New Roman" size="14.5" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </GridPane.margin></Label>
+            <Label layoutX="10.0" layoutY="248.0" text="Ukoliko želite da nam pošaljete svoju recenziju za neki naš proizvod, kontaktirajte nas na e-mail reviews@cerave.com" textAlignment="JUSTIFY" textFill="#10006c" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.5" />
+               </font>
+            </Label>
+            <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-border-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font></Button>
             </children>
         </GridPane>
     </center>

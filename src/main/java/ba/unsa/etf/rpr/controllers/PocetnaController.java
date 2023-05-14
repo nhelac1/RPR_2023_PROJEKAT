@@ -63,6 +63,7 @@ public class PocetnaController {
             System.out.println(e.getMessage());
         }
     }
+
     @FXML
     public void promjenaBoje(MouseEvent event) {
         Button btn = (Button) event.getSource();
