@@ -17,8 +17,8 @@
         <rowConstraints>
             <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="51.60000381469726" vgrow="ALWAYS" />
           <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="91.0" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="88.6" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="246.99999999999997" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="119.80001525878907" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="218.19998474121093" vgrow="ALWAYS" />
             <RowConstraints />
         </rowConstraints>
          <children>
@@ -33,9 +33,9 @@
                   <Insets left="295.0" />
                </GridPane.margin>
             </ImageView>
-            <Label prefHeight="36.0" prefWidth="153.0" text="Dobrodošli !" textAlignment="CENTER" textFill="#10006c" textOverrun="CLIP" GridPane.rowIndex="2">
+            <Label prefHeight="36.0" prefWidth="153.0" text="Dobrodošli !" textAlignment="CENTER" textFill="#10006c" textOverrun="CLIP" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets left="180.0" />
+                  <Insets left="180.0" top="20.0" />
                </GridPane.margin>
                <font>
                   <Font name="Brush Script MT Italic" size="36.0" />
@@ -142,6 +142,13 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
+            <Label text="Unesite potrebne podatke za prijavu !" textFill="#10006c" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin></Label>
          </children>
       </GridPane>
    </center>

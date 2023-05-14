@@ -14,7 +14,7 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class RegistracijaController {
-    public Button btnOtkazi;
+    public Button btnOtkazi, btnRegistracija;
 
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
@@ -48,6 +48,8 @@ public class RegistracijaController {
     }
     public void actionRegistrujSe(ActionEvent actionEvent) throws IOException {
         try {
+            Stage stage =(Stage)btnRegistracija.getScene().getWindow();
+            stage.close();
             Stage stage1 = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/potvrdaR.fxml"));
             PotvrdaRegistracijeController potvrda = new PotvrdaRegistracijeController();

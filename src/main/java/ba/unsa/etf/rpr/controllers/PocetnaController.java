@@ -15,10 +15,12 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class PocetnaController {
-    public Button btnONama;
+    public Button btnONama, btnRegistracija;
 
     public void actionRegistracija(ActionEvent actionEvent) throws IOException {
         try {
+            Stage stage =(Stage)btnRegistracija.getScene().getWindow();
+            stage.close();
             Stage stage1 = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/registracija.fxml"));
             RegistracijaController reg = new RegistracijaController();
