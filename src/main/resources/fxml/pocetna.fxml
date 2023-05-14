@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -8,11 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
-    <stylesheets>
-        <URL value="@/css/pocetna.css" />
-
-    </stylesheets>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -21,13 +16,13 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="51.60000381469726" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="87.59999618530273" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="105.0" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="190.0000152587891" minHeight="10.0" prefHeight="190.0000152587891" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="91.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="15.0" prefHeight="88.6" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="246.99999999999997" vgrow="ALWAYS" />
             <RowConstraints />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="112.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <ImageView fitHeight="93.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                <image>
                   <Image url="@../images/logoCeraVe.png" />
                </image>
@@ -52,13 +47,14 @@
                 <ColumnConstraints fillWidth="false" hgrow="ALWAYS" maxWidth="339.0" minWidth="10.0" prefWidth="325.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints maxHeight="42.39999999999999" minHeight="10.0" prefHeight="34.39999999999999" vgrow="ALWAYS" />
-                  <RowConstraints maxHeight="60.400000000000006" minHeight="10.0" prefHeight="60.400000000000006" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="97.39999999999999" minHeight="10.0" prefHeight="38.599999999999994" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="97.39999999999999" minHeight="10.0" prefHeight="31.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="71.40000762939454" minHeight="10.0" prefHeight="53.599999999999994" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="PRIJAVI SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="PRIJAVI SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="85.0" />
                      </GridPane.margin>
@@ -82,12 +78,12 @@
                         <Insets left="80.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <TextField minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </TextField>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="REGISTRUJ SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button fx:id="btnRegistracija" mnemonicParsing="false" onAction="#actionRegistracija" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="REGISTRUJ SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="85.0" />
                      </GridPane.margin>
@@ -95,15 +91,15 @@
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Button>
-                  <Label layoutX="112.0" layoutY="65.0" text="Još uvijek nemate račun ?" textFill="#10006c" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                  <Label layoutX="112.0" layoutY="65.0" text="Još uvijek nemate račun ?" textFill="#10006c" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.valignment="TOP">
                      <font>
                         <Font name="Times New Roman" size="16.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets left="80.0" />
+                        <Insets left="80.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <PasswordField prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <PasswordField minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding></PasswordField>
