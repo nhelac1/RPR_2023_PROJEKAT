@@ -15,8 +15,25 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class PocetnaController {
-    public Button btnONama, btnRegistracija;
+    public Button btnONama, btnRegistracija, btnPrijava;
 
+    public void actionPrijava(ActionEvent actionEvent) throws IOException {
+        try {
+            Stage stage =(Stage)btnPrijava.getScene().getWindow();
+            stage.close();
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/proizvodi.fxml"));
+            ProizvodiController proizvodi = new ProizvodiController();
+            fxmlLoader.setController(proizvodi);
+            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+            stage1.setTitle("CeraVe ponuda");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     public void actionRegistracija(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage =(Stage)btnRegistracija.getScene().getWindow();

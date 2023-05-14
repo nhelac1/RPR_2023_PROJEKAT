@@ -54,7 +54,7 @@
                   <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="PRIJAVI SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <Button fx:id="btnPrijava" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionPrijava" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="PRIJAVI SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="85.0" />
                      </GridPane.margin>
