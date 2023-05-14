@@ -4,10 +4,8 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
@@ -31,7 +29,7 @@
          <children>
             <ImageView fitHeight="112.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                <image>
-                  <Image url="@../images/logo.png" />
+                  <Image url="@../images/logoCeraVe.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -48,22 +46,6 @@
                   <Font name="Brush Script MT Italic" size="36.0" />
                </font>
             </Label>
-            <ToolBar maxHeight="1.7976931348623157E308" prefHeight="332.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="4">
-               <effect>
-                  <Lighting diffuseConstant="1.07" specularConstant="0.41" specularExponent="0.0" surfaceScale="0.0">
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant>
-                           <color>
-                              <Color red="0.0117647061124444" green="0.4901960790157318" blue="1.0" />
-                           </color>
-                        </Light.Distant>
-                     </light>
-                  </Lighting>
-               </effect>
-            </ToolBar>
             <GridPane GridPane.rowIndex="3">
               <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" maxWidth="250.0" minWidth="10.0" prefWidth="185.0" />
@@ -155,6 +137,14 @@
                         <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                      </padding></Button>
                </children>
+            </GridPane>
+            <GridPane style="-fx-background-color: rgb(3,125,255);" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
             </GridPane>
          </children>
       </GridPane>
