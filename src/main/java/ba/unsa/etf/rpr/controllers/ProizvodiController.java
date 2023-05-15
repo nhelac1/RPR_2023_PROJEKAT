@@ -73,6 +73,33 @@ public class ProizvodiController {
         }
 
     }
+
+    public void actionOtvaranjeKorpe(ActionEvent actionEvent) throws IOException {
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/korpa.fxml"));
+            MojaKorpaController korpa = new MojaKorpaController();
+            fxmlLoader.setController(korpa);
+            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+            stage1.setTitle("Moja CeraVe korpa");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @FXML
+    public void promjenaBoje(MouseEvent event) {
+        Button btn = (Button) event.getSource();
+        btn.setStyle("-fx-background-color: rgb(196,196,196); -fx-background-radius:10px;");
+    }
+
+    @FXML
+    public void vracanjeBoje(MouseEvent event) {
+        Button btn = (Button) event.getSource();
+        btn.setStyle("-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;");
+    }
     @FXML
     public void promjenaBoje1(MouseEvent event) {
         Button btn = (Button) event.getSource();
