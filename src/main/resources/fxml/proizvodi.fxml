@@ -68,7 +68,7 @@
                   </Button>
                     </children>
                 </GridPane>
-            <Button mnemonicParsing="false" onAction="#actionOtvaranjeKorpe" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-border-radius: 10px;" text="Dodaj u korpu" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <Button mnemonicParsing="false" onAction="#actionOtvaranjeKorpe" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="Dodaj u korpu" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -102,9 +102,9 @@
                            <children>
                               <TableView fx:id="idPrikaz11" prefHeight="355.0" prefWidth="471.0">
                                  <columns>
-                                    <TableColumn fx:id="idNaziv2" prefWidth="156.00000876188278" text="Naziv" />
-                                    <TableColumn fx:id="idNamjena2" prefWidth="206.40000915527344" text="Namjena" />
-                                    <TableColumn fx:id="idCijena2" prefWidth="86.0" text="Cijena" />
+                                    <TableColumn fx:id="idNaziv2" prefWidth="156.00000876188278" resizable="false" text="Naziv" />
+                                    <TableColumn fx:id="idNamjena2" prefWidth="206.40000915527344" resizable="false" text="Namjena" />
+                                    <TableColumn fx:id="idCijena2" prefWidth="86.0" resizable="false" text="Cijena" />
                                  </columns>
                               </TableView>
                            </children></AnchorPane>

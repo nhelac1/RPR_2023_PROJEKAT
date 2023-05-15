@@ -1,11 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" >
-   <children>
-      <Button layoutX="248.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-   </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="518.0" minWidth="10.0" prefWidth="289.2" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="358.40000000000003" minWidth="10.0" prefWidth="314.40000000000003" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="52.6" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="203.59999999999997" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="178.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="49.0" vgrow="ALWAYS" />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <GridPane style="-fx-background-color: rgb(3,125,255);" GridPane.columnSpan="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.79999999999998" minWidth="10.0" prefWidth="196.6" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.59999999999997" minWidth="10.0" prefWidth="149.59999999999997" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="92.80000000000001" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="82.80000000000001" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="81.20000000000005" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="btnPomoc" mnemonicParsing="false" onAction="#actionOtvaranjeHelp" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                            <font>
+                                <Font name="Times New Roman" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding></Button>
+                        <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="O nama" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                            <font>
+                                <Font name="Times New Roman" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding></Button>
+                        <ImageView fitHeight="53.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/logoCeraVe1.png" />
+                            </image>
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin></ImageView>
+                        <Button fx:id="btnOdjava" mnemonicParsing="false" onAction="#actionOdjaviSe" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: rgb(3,140,255);" text="Odjava" GridPane.columnIndex="4">
+                            <font>
+                                <Font name="Times New Roman" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnKorpa" layoutX="279.0" layoutY="16.0" mnemonicParsing="false" onAction="#actionOtvaranjeKorpe" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Korpa" GridPane.columnIndex="3">
+                            <font>
+                                <Font name="Times New Roman" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                        </Button>
+                    </children>
+                </GridPane>
+            <GridPane style="-fx-background-color: white;" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="115.0" right="115.0" />
+               </GridPane.margin>
+               <children>
+                  <Label text="NEKA KREMA" textFill="#10006c" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Times New Roman Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Naziv proizvoda:" textFill="#10006c" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Cijena proizvoda:" textFill="#10006c" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="XXXX KM" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Times New Roman Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button mnemonicParsing="false" onDragExited="#vracanjeBoje" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="OBRIŠI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onDragExited="#vracanjeBoje" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="NARUČI" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="100.0" />
+               </GridPane.margin>
+            </Button>
+            <ImageView fitHeight="223.0" fitWidth="376.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../images/proizvodi.png" />
+               </image></ImageView>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>
