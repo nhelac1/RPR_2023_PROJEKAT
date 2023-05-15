@@ -1,26 +1,53 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.domain.Proizvod;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Callback;
 
 import javax.swing.*;
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class ProizvodiController {
     public Button btnOdjava;
-    public ImageView imageOdjava;
+    @FXML private Accordion idKategorije;
+    @FXML private TitledPane idKremeZaLice;
+    @FXML private TableView<Proizvod> idPrikaz1;
+    @FXML private TableColumn<Proizvod, String> idFotografija1;
+    @FXML private TableColumn<Proizvod, String> idNaziv1;
+    @FXML private TableColumn<Proizvod, Float> idCijena1;
+    private final ObservableList<Proizvod> data = FXCollections.observableArrayList();
+
+    @FXML public void initialize() {
+        idNaziv1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
+        idFotografija1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("slika"));
+        idCijena1.setCellValueFactory(new PropertyValueFactory<Proizvod, Float>("cijena"));
+
+        Proizvod p1 = new Proizvod("slika", "Nedzla", 115);
+        data.add(p1);
+        idPrikaz1.setItems(data);
+    }
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage1 = new Stage();

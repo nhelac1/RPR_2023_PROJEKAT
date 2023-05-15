@@ -4,11 +4,19 @@ import java.util.Objects;
 
 public class Proizvod implements Idable{
     private int id;
+    private String slika;
     private String ime;
     private float cijena;
-    private int kolicina;
-    private String opis;
-    private byte[] slika;
+
+    public Proizvod(String slika, String ime, float cijena) {
+        this.slika = slika;
+        this.ime = ime;
+        this.cijena = cijena;
+    }
+
+    public Proizvod() {
+    }
+
     private Kategorija kategorija;
 
     public int getId() {
@@ -35,27 +43,11 @@ public class Proizvod implements Idable{
         this.cijena = cijena;
     }
 
-    public int getKolicina() {
-        return kolicina;
-    }
-
-    public void setKolicina(int kolicina) {
-        this.kolicina = kolicina;
-    }
-
-    public String getOpis() {
-        return opis;
-    }
-
-    public void setOpis(String opis) {
-        this.opis = opis;
-    }
-
-    public byte[] getSlika() {
+    public String getSlika() {
         return slika;
     }
 
-    public void setSlika(byte[] slika) {
+    public void setSlika(String slika) {
         this.slika = slika;
     }
 
@@ -74,8 +66,6 @@ public class Proizvod implements Idable{
                 "id = " + id +
                 ", ime = '" + ime + '\'' +
                 ", cijena = " + cijena +
-                ", kolicina = " + kolicina +
-                ", opis = '" + opis + '\'' +
                 ", kategorija = " + kategorija +
                 '}';
     }
@@ -89,6 +79,6 @@ public class Proizvod implements Idable{
     }
     @Override
     public int hashCode() {
-        return Objects.hash(id, ime, cijena, kolicina, opis, slika, kategorija);
+        return Objects.hash(id, ime, cijena, slika, kategorija);
     }
 }

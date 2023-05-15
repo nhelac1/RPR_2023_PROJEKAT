@@ -29,9 +29,7 @@ public class ProizvodDaoSQLImpl implements ProizvodDao {
                 product.setId(rs.getInt("id"));
                 product.setIme(rs.getString("ime"));
                 product.setCijena(rs.getFloat("cijena"));
-                product.setKolicina(rs.getInt("kolicina"));
-                product.setOpis(rs.getString("opis"));
-                product.setSlika(rs.getBytes("slika"));
+                product.setSlika(rs.getString("slika"));
                 rs.close();
                 return product;
             }else{
