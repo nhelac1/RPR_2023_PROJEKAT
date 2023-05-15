@@ -8,6 +8,7 @@ public class Proizvod implements Idable{
     private float cijena;
     private int kolicina;
     private String opis;
+    private byte[] slika;
     private Kategorija kategorija;
 
     public int getId() {
@@ -50,6 +51,14 @@ public class Proizvod implements Idable{
         this.opis = opis;
     }
 
+    public byte[] getSlika() {
+        return slika;
+    }
+
+    public void setSlika(byte[] slika) {
+        this.slika = slika;
+    }
+
     public Kategorija getKategorija() {
         return kategorija;
     }
@@ -57,6 +66,7 @@ public class Proizvod implements Idable{
     public void setKategorija(Kategorija kategorija) {
         this.kategorija = kategorija;
     }
+
 
     @Override
     public String toString() {
@@ -79,6 +89,6 @@ public class Proizvod implements Idable{
     }
     @Override
     public int hashCode() {
-        return Objects.hash(id, ime, cijena, kolicina, opis, kategorija);
+        return Objects.hash(id, ime, cijena, kolicina, opis, slika, kategorija);
     }
 }
