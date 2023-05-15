@@ -44,7 +44,17 @@ public class ProizvodiController {
     @FXML private TableColumn<Proizvod, String> idCijena1;
     private final ObservableList<Proizvod> data = FXCollections.observableArrayList();
 
+    @FXML public void initialize() {
+        idNaziv1.setCellValueFactory(new PropertyValueFactory<>("ime"));
+        idNamjena1.setCellValueFactory(new PropertyValueFactory<>("namjena"));
+        idCijena1.setCellValueFactory(new PropertyValueFactory<>("cijena"));
 
+        Proizvod p = new Proizvod("Moistirusing Cream", "za suhe i ispucale ruke", "22 KM");
+        data.add(p);
+        idPrikaz1.setItems(data);
+
+
+    }
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage1 = new Stage();
