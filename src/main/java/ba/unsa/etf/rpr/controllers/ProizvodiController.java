@@ -38,11 +38,13 @@ public class ProizvodiController {
     public Button btnOdjava;
     @FXML private Accordion idKategorije;
     @FXML private TitledPane idKremeZaLice;
-    @FXML private TableView<Proizvod> idPrikaz1;
-    @FXML private TableColumn<Proizvod, String> idNaziv1;
-    @FXML private TableColumn<Proizvod, String> idNamjena1;
-    @FXML private TableColumn<Proizvod, String> idCijena1;
-    private final ObservableList<Proizvod> data = FXCollections.observableArrayList();
+    @FXML private TableView<Proizvod> idPrikaz1, idPrikaz2, idPrikaz3;
+    @FXML private TableColumn<Proizvod, String> idNaziv1, idNaziv2, idNaziv3;
+    @FXML private TableColumn<Proizvod, String> idNamjena1, idNamjena2, idNamjena3;
+    @FXML private TableColumn<Proizvod, String> idCijena1, idCijena2, idCijena3;
+    private final ObservableList<Proizvod> data1 = FXCollections.observableArrayList();
+    private final ObservableList<Proizvod> data2 = FXCollections.observableArrayList();
+    private final ObservableList<Proizvod> data3 = FXCollections.observableArrayList();
 
     @FXML public void initialize() {
         idNaziv1.setCellValueFactory(new PropertyValueFactory<>("ime"));
@@ -50,8 +52,8 @@ public class ProizvodiController {
         idCijena1.setCellValueFactory(new PropertyValueFactory<>("cijena"));
 
         Proizvod p = new Proizvod("Moistirusing Cream", "za suhe i ispucale ruke", "22 KM");
-        data.add(p);
-        idPrikaz1.setItems(data);
+        data1.add(p);
+        idPrikaz1.setItems(data1);
 
 
     }
