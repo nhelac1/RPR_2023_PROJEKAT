@@ -15,8 +15,8 @@
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="52.6" vgrow="ALWAYS" />
-                <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="203.59999999999997" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="178.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="209.2" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="171.60000000000002" vgrow="ALWAYS" />
             <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="49.0" vgrow="ALWAYS" />
                 <RowConstraints />
                 <RowConstraints />
@@ -34,14 +34,14 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPomoc" mnemonicParsing="false" onAction="#actionOtvaranjeHelp" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnPomoc" mnemonicParsing="false"  style="-fx-background-color: rgb(36,140,255)" text="Pomoć" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
                             <padding>
                                 <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                             </padding></Button>
-                        <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="O nama" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnONama" mnemonicParsing="false"  style="-fx-background-color: rgb(36,140,255)" text="O nama" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
@@ -55,12 +55,12 @@
                             <GridPane.margin>
                                 <Insets left="10.0" />
                             </GridPane.margin></ImageView>
-                        <Button fx:id="btnOdjava" mnemonicParsing="false" onAction="#actionOdjaviSe" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: rgb(3,140,255);" text="Odjava" GridPane.columnIndex="4">
+                        <Button fx:id="btnOdjava" mnemonicParsing="false"  prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: rgb(3,140,255);" text="Odjava" GridPane.columnIndex="4">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
                         </Button>
-                        <Button fx:id="btnKorpa" layoutX="279.0" layoutY="16.0" mnemonicParsing="false" onAction="#actionOtvaranjeKorpe" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255)" text="Korpa" GridPane.columnIndex="3">
+                        <Button fx:id="btnKorpa" layoutX="279.0" layoutY="16.0" mnemonicParsing="false"  style="-fx-background-color: rgb(36,140,255)" text="Korpa" GridPane.columnIndex="3">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
@@ -70,7 +70,7 @@
                         </Button>
                     </children>
                 </GridPane>
-            <GridPane style="-fx-background-color: white;" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <GridPane prefHeight="158.0" prefWidth="419.0" style="-fx-background-color: rgb(115,182,255);" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -80,10 +80,10 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <GridPane.margin>
-                  <Insets bottom="20.0" left="115.0" right="115.0" />
+                  <Insets bottom="20.0" left="80.0" right="80.0" />
                </GridPane.margin>
                <children>
-                  <Label text="NEKA KREMA" textFill="#10006c" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                  <Label text="NEKA KREMA" textFill="WHITE" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
                         <Insets bottom="10.0" />
                      </GridPane.margin>
@@ -91,7 +91,7 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label text="Naziv proizvoda:" textFill="#10006c" GridPane.valignment="BOTTOM">
+                  <Label text="Naziv proizvoda:" textFill="WHITE" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
                         <Insets bottom="10.0" left="30.0" />
                      </GridPane.margin>
@@ -99,7 +99,7 @@
                         <Font name="Times New Roman" size="15.0" />
                      </font>
                   </Label>
-                  <Label text="Cijena proizvoda:" textFill="#10006c" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <Label text="Cijena proizvoda:" textFill="WHITE" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="30.0" top="10.0" />
                      </GridPane.margin>
@@ -107,7 +107,7 @@
                         <Font name="Times New Roman" size="15.0" />
                      </font>
                   </Label>
-                  <Label text="XXXX KM" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <Label text="XXXX KM" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
@@ -117,7 +117,7 @@
                   </Label>
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" onDragExited="#vracanjeBoje" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="OBRIŠI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="OBRIŠI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -125,7 +125,7 @@
                   <Insets left="100.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onDragExited="#vracanjeBoje" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="NARUČI" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button mnemonicParsing="false"  prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="NARUČI" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -133,7 +133,7 @@
                   <Insets right="100.0" />
                </GridPane.margin>
             </Button>
-            <ImageView fitHeight="223.0" fitWidth="376.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <ImageView fitHeight="207.0" fitWidth="506.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <image>
                   <Image url="@../images/proizvodi.png" />
                </image></ImageView>
