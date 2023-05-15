@@ -76,7 +76,7 @@
                   <Insets top="10.0" />
                </GridPane.margin>
             </Button>
-            <Accordion fx:id="idKategorije" GridPane.rowIndex="1">
+            <Accordion fx:id="idKategorije" prefHeight="258.0" prefWidth="300.0" GridPane.rowIndex="1">
               <panes>
                 <TitledPane fx:id="idKremeZaLice" animated="false" text="Kreme za lice">
                   <content>
@@ -85,8 +85,8 @@
                               <TableView fx:id="idPrikaz1" layoutY="-2.0" prefHeight="355.0" prefWidth="471.0">
                                 <columns>
                                   <TableColumn fx:id="idFotografija1" prefWidth="254.20003658533096" text="Fotografija" />
-                                  <TableColumn fx:id="idNaziv1" prefWidth="127.39999389648438" text="Naziv" />
-                                    <TableColumn fx:id="idCijena1" prefWidth="89.79998779296875" text="Cijena" />
+                                  <TableColumn fx:id="idNaziv1" prefWidth="107.00001525878906" text="Naziv" />
+                                    <TableColumn fx:id="idCijena1" prefWidth="86.0" text="Cijena" />
                                 </columns>
                               </TableView>
                            </children>
@@ -104,6 +104,9 @@
                   </content>
                 </TitledPane>
               </panes>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
             </Accordion>
             </children>
         </GridPane>
