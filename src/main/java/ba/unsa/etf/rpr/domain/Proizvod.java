@@ -1,23 +1,28 @@
 package ba.unsa.etf.rpr.domain;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.InputStream;
 import java.util.Objects;
 
 public class Proizvod implements Idable{
     private int id;
-    private String slika;
     private String ime;
-    private float cijena;
+    private String namjena;
+    private String cijena;
+    private Kategorija kategorija;
 
-    public Proizvod(String slika, String ime, float cijena) {
-        this.slika = slika;
+    public Proizvod(String ime, String namjena, String cijena) {
         this.ime = ime;
+        this.namjena = namjena;
         this.cijena = cijena;
     }
 
     public Proizvod() {
     }
 
-    private Kategorija kategorija;
+
 
     public int getId() {
         return id;
@@ -35,20 +40,20 @@ public class Proizvod implements Idable{
         this.ime = ime;
     }
 
-    public float getCijena() {
+    public String getNamjena() {
+        return namjena;
+    }
+
+    public void setNamjena(String namjena) {
+        this.namjena = namjena;
+    }
+
+    public String getCijena() {
         return cijena;
     }
 
-    public void setCijena(float cijena) {
+    public void setCijena(String cijena) {
         this.cijena = cijena;
-    }
-
-    public String getSlika() {
-        return slika;
-    }
-
-    public void setSlika(String slika) {
-        this.slika = slika;
     }
 
     public Kategorija getKategorija() {
@@ -65,6 +70,7 @@ public class Proizvod implements Idable{
         return "Proizvod {" +
                 "id = " + id +
                 ", ime = '" + ime + '\'' +
+                ", namjena = '" + namjena + '\'' +
                 ", cijena = " + cijena +
                 ", kategorija = " + kategorija +
                 '}';
@@ -79,6 +85,6 @@ public class Proizvod implements Idable{
     }
     @Override
     public int hashCode() {
-        return Objects.hash(id, ime, cijena, slika, kategorija);
+        return Objects.hash(id, ime, namjena, cijena, kategorija);
     }
 }

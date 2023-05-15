@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -20,8 +21,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 
 import javax.swing.*;
-import javax.swing.text.html.ImageView;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -35,39 +39,12 @@ public class ProizvodiController {
     @FXML private Accordion idKategorije;
     @FXML private TitledPane idKremeZaLice;
     @FXML private TableView<Proizvod> idPrikaz1;
-    @FXML private TableColumn<Proizvod, String> idFotografija1;
     @FXML private TableColumn<Proizvod, String> idNaziv1;
-    @FXML private TableColumn<Proizvod, Float> idCijena1;
+    @FXML private TableColumn<Proizvod, String> idNamjena1;
+    @FXML private TableColumn<Proizvod, String> idCijena1;
     private final ObservableList<Proizvod> data = FXCollections.observableArrayList();
 
-    @FXML
-    public void initialize() {
-        idNaziv1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
-        idFotografija1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("slika"));
-        idCijena1.setCellValueFactory(new PropertyValueFactory<Proizvod, Float>("cijena"));
 
-        idNaziv1.setCellFactory(column -> {
-            return new TableCell<Proizvod, String>() {
-                @Override
-                protected void updateItem(String item, boolean empty) {
-                    super.updateItem(item, empty);
-                    if (item == null || empty) {
-                        setGraphic(null);
-                        setText(null);
-                    } else {
-                        Text text = new Text(item);
-                        text.wrappingWidthProperty().bind(idNaziv1.widthProperty());
-                        setGraphic(text);
-                        setText(null);
-                    }
-                }
-            };
-        });
-
-        Proizvod p1 = new Proizvod("slika", "Nedzlaaaaaaaaaaaaaaaaaaaaaaaa", 115);
-        data.add(p1);
-        idPrikaz1.setItems(data);
-    }
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage1 = new Stage();
