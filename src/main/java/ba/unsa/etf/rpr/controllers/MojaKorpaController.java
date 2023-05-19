@@ -88,6 +88,21 @@ public class MojaKorpaController {
 
         if (idLabel1.getText() == "" && idLabel2.getText() == "")
             idLabel3.setText("U korpi ne postoji nijedan proizvod za naručiti !");
+        else {
+            try {
+                Stage stage1 = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/potvrdaN.fxml"));
+                PotvrdaNarudzbeController potvrda = new PotvrdaNarudzbeController();
+                fxmlLoader.setController(potvrda);
+                Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+                stage1.setTitle("CeraVe");
+                stage1.setScene(scene);
+                stage1.setResizable(false);
+                stage1.show();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
 
     }
 
