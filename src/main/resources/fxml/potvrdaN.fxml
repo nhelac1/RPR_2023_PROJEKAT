@@ -19,7 +19,7 @@
                 <RowConstraints maxHeight="67.4" minHeight="10.0" prefHeight="67.4" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button fx:id="btnZatvori" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                     <font>
                         <Font name="Times New Roman" size="15.0" />
                     </font></Button>

@@ -15,7 +15,7 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MojaKorpaController {
-    public Button btnOdjava, btnZatvori;
+    public Button btnOdjava, btnZatvori, btnNaruci;
     public Label idLabel1, idLabel2, idLabel3;
 
 
@@ -90,6 +90,8 @@ public class MojaKorpaController {
             idLabel3.setText("U korpi ne postoji nijedan proizvod za naručiti !");
         else {
             try {
+                Stage stage =(Stage)btnNaruci.getScene().getWindow();
+                stage.close();
                 Stage stage1 = new Stage();
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/potvrdaN.fxml"));
                 PotvrdaNarudzbeController potvrda = new PotvrdaNarudzbeController();
