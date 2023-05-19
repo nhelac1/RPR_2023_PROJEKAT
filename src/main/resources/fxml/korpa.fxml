@@ -15,10 +15,11 @@
             <ColumnConstraints hgrow="ALWAYS" maxWidth="358.40000000000003" minWidth="10.0" prefWidth="244.2" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="52.6" vgrow="ALWAYS" />
-                <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="209.2" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="119.0" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="101.39999999999998" vgrow="ALWAYS" />
+                <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="52.8" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="210.59999999999997" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="103.39999999999998" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="31.600000000000023" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="84.80000000000001" vgrow="ALWAYS" />
                 <RowConstraints />
                 <RowConstraints />
             </rowConstraints>
@@ -113,7 +114,7 @@
                   </Label>
                </children>
             </GridPane>
-            <Button fx:id="btnObrisi" mnemonicParsing="false" onAction="#actionBrisanjeIzKorpe" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="OBRIŠI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button fx:id="btnObrisi" mnemonicParsing="false" onAction="#actionBrisanjeIzKorpe" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="OBRIŠI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -121,7 +122,7 @@
                   <Insets left="90.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnNaruci" mnemonicParsing="false" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="NARUČI" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button fx:id="btnNaruci" mnemonicParsing="false" onAction="#actionNaruciProizvod" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="NARUČI" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -133,7 +134,7 @@
                <image>
                   <Image url="@../images/proizvodi.png" />
                </image></ImageView>
-            <Button fx:id="btnZatvori" layoutX="108.0" layoutY="392.0" mnemonicParsing="false" onAction="#actionZatvori" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button fx:id="btnZatvori" layoutX="108.0" layoutY="392.0" mnemonicParsing="false" onAction="#actionZatvori" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -141,6 +142,14 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Button>
+            <Label fx:id="idLabel3" textFill="RED" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
             </children>
         </GridPane>
     </center>
