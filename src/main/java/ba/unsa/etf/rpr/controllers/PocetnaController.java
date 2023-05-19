@@ -5,34 +5,51 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class PocetnaController {
-    public Button btnONama, btnRegistracija, btnPrijava;
+    public Button btnRegistracija, btnPrijava;
+    public TextField idEmail;
+    public PasswordField idPassword;
+    public Label idLabel4;
 
     public void actionPrijava(ActionEvent actionEvent) throws IOException {
-        try {
-            Stage stage =(Stage)btnPrijava.getScene().getWindow();
-            stage.close();
-            Stage stage1 = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/proizvodi.fxml"));
-            ProizvodiController proizvodi = new ProizvodiController();
-            fxmlLoader.setController(proizvodi);
-            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
-            stage1.setTitle("CeraVe ponuda");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        int brojac = 0;
+        if (Objects.equals(idPassword.getText(), "") || Objects.equals(idEmail.getText(), "")) {
+            idLabel4.setText("Polje ne može biti prazno !");
+            brojac++;
+        } else {
+            idLabel4.setText("");
         }
+        if (brojac == 0) {
+            try {
+                Stage stage =(Stage)btnPrijava.getScene().getWindow();
+                stage.close();
+                Stage stage1 = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/proizvodi.fxml"));
+                ProizvodiController proizvodi = new ProizvodiController();
+                fxmlLoader.setController(proizvodi);
+                Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+                stage1.setTitle("CeraVe ponuda");
+                stage1.setScene(scene);
+                stage1.setResizable(false);
+                stage1.show();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
     }
     public void actionRegistracija(ActionEvent actionEvent) throws IOException {
         try {

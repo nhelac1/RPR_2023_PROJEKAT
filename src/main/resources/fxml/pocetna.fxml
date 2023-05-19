@@ -78,7 +78,7 @@
                         <Insets left="80.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <TextField fx:id="idEmail" minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
@@ -99,7 +99,7 @@
                         <Insets left="80.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <PasswordField minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <PasswordField fx:id="idPassword" minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding></PasswordField>
