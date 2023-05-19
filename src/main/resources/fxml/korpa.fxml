@@ -35,14 +35,14 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPomoc" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255);" text="Pomoć" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnPomoc" mnemonicParsing="false" onAction="#actionOtvaranjeHelp" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255);" text="Pomoć" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
                             <padding>
                                 <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                             </padding></Button>
-                        <Button fx:id="btnONama" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255);" text="O nama" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" style="-fx-background-color: rgb(36,140,255);" text="O nama" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
@@ -56,12 +56,7 @@
                             <GridPane.margin>
                                 <Insets left="10.0" />
                             </GridPane.margin></ImageView>
-                        <Button fx:id="btnOdjava" mnemonicParsing="false" prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: rgb(36,140,255);" text="Odjava" textFill="WHITE" GridPane.columnIndex="4">
-                            <font>
-                                <Font name="Times New Roman" size="15.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="btnKorpa" layoutX="279.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255);" text="Korpa" textFill="WHITE" GridPane.columnIndex="3">
+                        <Button fx:id="btnKorpa" layoutX="279.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255);" text="Korpa" textFill="WHITE" underline="true" GridPane.columnIndex="4">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
