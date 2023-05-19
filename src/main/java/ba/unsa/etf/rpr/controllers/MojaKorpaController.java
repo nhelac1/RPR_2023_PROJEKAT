@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -15,6 +16,8 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MojaKorpaController {
     public Button btnOdjava, btnZatvori;
+    public Label idLabel1, idLabel2;
+
 
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
@@ -73,6 +76,12 @@ public class MojaKorpaController {
     {
         Stage stage =(Stage)btnZatvori.getScene().getWindow();
         stage.close();
+    }
+
+    public void actionBrisanjeIzKorpe(ActionEvent actionEvent) {
+
+        idLabel1.setText("");
+        idLabel2.setText("");
     }
 
     @FXML
