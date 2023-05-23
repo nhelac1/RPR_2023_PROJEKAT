@@ -32,8 +32,8 @@ public class ProizvodDaoSQLImpl extends AbstractDao<Proizvod> implements Proizvo
             proizvod.setId(rs.getInt("id"));
             proizvod.setIme(rs.getString("ime"));
             proizvod.setCijena(rs.getString("cijena"));
-            //proizvod.setKategorija();
             proizvod.setNamjena(rs.getString("namjena"));
+            proizvod.setKategorija(DaoFactory.kategorijaDao().getById(rs.getInt("id_kategorija")));
             return proizvod;
         } catch (Exception e) {
             throw new CeraVeException(e.getMessage(), e);
@@ -46,8 +46,8 @@ public class ProizvodDaoSQLImpl extends AbstractDao<Proizvod> implements Proizvo
         item.put("id", object.getId());
         item.put("ime", object.getIme());
         item.put("cijena", object.getCijena());
-        item.put("id_kategorija", object.getKategorija().getId());
         item.put("namjena", object.getNamjena());
+        item.put("id_kategorija", object.getKategorija().getId());
         return item;
     }
 }
