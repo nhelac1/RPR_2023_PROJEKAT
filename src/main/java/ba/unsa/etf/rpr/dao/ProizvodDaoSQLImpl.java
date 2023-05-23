@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -49,5 +50,10 @@ public class ProizvodDaoSQLImpl extends AbstractDao<Proizvod> implements Proizvo
         item.put("namjena", object.getNamjena());
         item.put("id_kategorija", object.getKategorija().getId());
         return item;
+    }
+
+    @Override
+    public List<Proizvod> pronadjiProizvod(String ime) throws CeraVeException {
+        return executeQuery("SELECT * FROM Proizvod WHERE ime LIKE concat('%', ?, '%')", new Object[]{ime});
     }
 }
