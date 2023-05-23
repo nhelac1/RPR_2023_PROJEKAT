@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.Narudzba;
+
 public class DaoFactory {
 
     private DaoFactory(){}
@@ -18,5 +20,13 @@ public class DaoFactory {
 
     public static KorisnikDao korisnikDao() {
         return korisnikDao;
+    }
+
+
+    
+    private static final NarudzbaDao narudzbaDao = NarudzbaDaoSQLImpl.getInstance();
+
+    public static NarudzbaDao narudzbaDao() {
+        return narudzbaDao;
     }
 }
