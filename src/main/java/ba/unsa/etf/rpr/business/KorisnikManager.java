@@ -10,6 +10,7 @@ public class KorisnikManager {
     public static Korisnik pronadjiEmail(String email) throws CeraVeException {
         return DaoFactory.korisnikDao().pronadjiEmail(email);
     }
+
     public void obrisiKorisnika(int id_korisnik) throws CeraVeException {
         try {
             DaoFactory.korisnikDao().delete(id_korisnik);
@@ -19,6 +20,9 @@ public class KorisnikManager {
             }
             throw e;
         }
+    }
 
+    public static Korisnik dodajKorisnika(Korisnik k) throws CeraVeException {
+        return DaoFactory.korisnikDao().add(k);
     }
 }
