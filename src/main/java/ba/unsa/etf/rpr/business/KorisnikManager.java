@@ -25,4 +25,12 @@ public class KorisnikManager {
     public static Korisnik dodajKorisnika(Korisnik k) throws CeraVeException {
         return DaoFactory.korisnikDao().add(k);
     }
+    
+    public Korisnik pronadjiKorisnikaPoID(int id) throws CeraVeException {
+        return DaoFactory.korisnikDao().getById(id);
+    }
+
+    public Korisnik azurirajKorisnika(Korisnik k) throws CeraVeException {
+        return DaoFactory.korisnikDao().update(k);
+    }
 }
