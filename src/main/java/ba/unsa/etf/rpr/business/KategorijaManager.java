@@ -24,4 +24,13 @@ public class KategorijaManager {
             throw e;
         }
     }
+
+    public void obrisiKategoriju(int id_kategorija) throws CeraVeException {
+        try {
+            DaoFactory.kategorijaDao().delete(id_kategorija);
+        } catch (CeraVeException e) {
+            if (e.getMessage().contains("FOREIGN KEY"))
+                    throw new CeraVeException("Ne možete obrisati kategoriju, jer je  u vezi sa tabelom Proizvod !");
+        }
+    }
 }
