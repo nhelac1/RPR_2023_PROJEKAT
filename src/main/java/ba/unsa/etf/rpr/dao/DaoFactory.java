@@ -1,7 +1,5 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.domain.Narudzba;
-
 public class DaoFactory {
 
     private DaoFactory(){}
@@ -21,4 +19,7 @@ public class DaoFactory {
 
     private static final ProizvodDao proizvodDao = ProizvodDaoSQLImpl.getInstance();
     public static ProizvodDao proizvodDao() { return proizvodDao; }
+
+    private static final NarudzbaProizvodDao narProDao = NarudzbaProizvodDaoSQLImpl.getInstance();
+    public static NarudzbaProizvodDao narProDao() { return narProDao; }
 }
