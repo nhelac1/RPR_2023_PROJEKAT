@@ -19,7 +19,12 @@ public class ProizvodManager {
     public void obrisiProizvod(int id) throws CeraVeException {
         DaoFactory.proizvodDao().delete(id);
     }
+
     public Proizvod dajProizvodPoID(int id) throws CeraVeException {
         return DaoFactory.proizvodDao().getById(id);
+    }
+
+    public void azurirajProizvod(Proizvod p) throws CeraVeException {
+        DaoFactory.proizvodDao().update(p);
     }
 }
