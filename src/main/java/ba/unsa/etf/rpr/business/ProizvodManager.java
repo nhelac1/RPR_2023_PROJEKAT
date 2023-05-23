@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.business;
 
 import ba.unsa.etf.rpr.dao.Dao;
 import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
@@ -30,5 +31,9 @@ public class ProizvodManager {
 
     public Proizvod dodajProizvod (Proizvod p) throws CeraVeException {
         return DaoFactory.proizvodDao().add(p);
+    }
+
+    public List<Proizvod> pronadjiProizvodPoKategoriji(Kategorija kat) throws CeraVeException {
+        return DaoFactory.proizvodDao().pronadjiProizvodPoKategoriji(kat);
     }
 }

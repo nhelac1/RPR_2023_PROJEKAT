@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
@@ -55,5 +56,10 @@ public class ProizvodDaoSQLImpl extends AbstractDao<Proizvod> implements Proizvo
     @Override
     public List<Proizvod> pronadjiProizvod(String ime) throws CeraVeException {
         return executeQuery("SELECT * FROM Proizvod WHERE ime LIKE concat('%', ?, '%')", new Object[]{ime});
+    }
+
+    @Override
+    public List<Proizvod> pronadjiProizvodPoKategoriji(Kategorija kat) throws CeraVeException {
+        return executeQuery("SELECT * FROM Proizvod WHERE id_kategorija = ?", new Object[]{kat.getId()});
     }
 }
