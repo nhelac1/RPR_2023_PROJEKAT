@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.business;
 
+import ba.unsa.etf.rpr.dao.Dao;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
@@ -43,5 +44,9 @@ public class KategorijaManager {
 
     public List<Kategorija> dajSveKategorije() throws CeraVeException {
         return DaoFactory.kategorijaDao().getAll();
+    }
+
+    public List<Kategorija> pronadjiKategorijuPoID(String ime) throws CeraVeException{
+        return DaoFactory.kategorijaDao().pronadjiKategorijuPoID(ime);
     }
 }
