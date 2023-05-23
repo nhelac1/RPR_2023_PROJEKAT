@@ -5,6 +5,8 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Korisnik;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
+import java.util.List;
+
 public class KorisnikManager {
 
     public static Korisnik pronadjiEmail(String email) throws CeraVeException {
@@ -25,12 +27,16 @@ public class KorisnikManager {
     public static Korisnik dodajKorisnika(Korisnik k) throws CeraVeException {
         return DaoFactory.korisnikDao().add(k);
     }
-    
+
     public Korisnik pronadjiKorisnikaPoID(int id) throws CeraVeException {
         return DaoFactory.korisnikDao().getById(id);
     }
 
     public Korisnik azurirajKorisnika(Korisnik k) throws CeraVeException {
         return DaoFactory.korisnikDao().update(k);
+    }
+
+    public List<Korisnik> dajSveKorisnike() throws CeraVeException {
+        return DaoFactory.korisnikDao().getAll();
     }
 }
