@@ -3,6 +3,7 @@ import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -41,5 +42,10 @@ public class KategorijaDaoSQLImpl extends AbstractDao<Kategorija> implements Kat
         red.put("id", object.getId());
         red.put("ime", object.getIme());
         return red;
+    }
+
+    @Override
+    public List<Kategorija> pronadjiKategorijuPoID(String ime) throws CeraVeException {
+        return null;
     }
 }

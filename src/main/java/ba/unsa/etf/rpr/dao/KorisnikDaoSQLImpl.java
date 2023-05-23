@@ -3,7 +3,11 @@ package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Korisnik;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
+
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -53,5 +57,21 @@ public class KorisnikDaoSQLImpl extends AbstractDao<Korisnik> implements Korisni
         item.put("email", object.getEmail());
         item.put("password", object.getPassword());
         return item;
+    }
+
+    @Override
+    public Korisnik pronadjiEmail(String email) throws CeraVeException {
+        String insert = "SELECT id FROM Korisnik WHERE email='" + email +"'";
+        try {
+            PreparedStatement stmt = getConnection().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()) {
+                return getById(rs.getInt(1));
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
