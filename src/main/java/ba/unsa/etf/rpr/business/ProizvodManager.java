@@ -15,4 +15,8 @@ public class ProizvodManager {
     public List<Proizvod> pronadjiProizvod(String ime) throws CeraVeException {
         return DaoFactory.proizvodDao().pronadjiProizvod(ime);
     }
+
+    public void obrisiProizvod(int id) throws CeraVeException {
+        DaoFactory.proizvodDao().delete(id);
+    }
 }
