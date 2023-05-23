@@ -46,6 +46,6 @@ public class KategorijaDaoSQLImpl extends AbstractDao<Kategorija> implements Kat
 
     @Override
     public List<Kategorija> pronadjiKategorijuPoID(String ime) throws CeraVeException {
-        return null;
+        return executeQuery("SELECT * FROM Kategorija WHERE ime = ?", new Object[]{ime});
     }
 }
