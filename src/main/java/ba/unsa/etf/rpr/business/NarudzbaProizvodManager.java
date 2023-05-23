@@ -13,4 +13,7 @@ public class NarudzbaProizvodManager {
     public List<NarudzbaProizvod> dajSveNP() throws CeraVeException {
         return DaoFactory.narProDao().getAll();
     }
+    public List<NarudzbaProizvod> dajPoKorisniku(int id_korisnik) throws CeraVeException {
+        return DaoFactory.narProDao().dajPoKorisniku(id_korisnik);
+    }
 }
