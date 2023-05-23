@@ -4,6 +4,8 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
+import java.util.List;
+
 public class KategorijaManager {
     public void validacijaImenaKategorije(String ime) throws CeraVeException {
         if (ime == null || ime.length() < 5)
@@ -37,5 +39,9 @@ public class KategorijaManager {
     public Kategorija azurirajKategoriju(Kategorija kat) throws CeraVeException {
         validacijaImenaKategorije(kat.getIme());
         return DaoFactory.kategorijaDao().update(kat);
+    }
+
+    public List<Kategorija> dajSveKategorije() throws CeraVeException {
+        return DaoFactory.kategorijaDao().getAll();
     }
 }
