@@ -33,4 +33,9 @@ public class KategorijaManager {
                     throw new CeraVeException("Ne možete obrisati kategoriju, jer je  u vezi sa tabelom Proizvod !");
         }
     }
+
+    public Kategorija azurirajKategoriju(Kategorija kat) throws CeraVeException {
+        validacijaImenaKategorije(kat.getIme());
+        return DaoFactory.kategorijaDao().update(kat);
+    }
 }
