@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.business;
 
+import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
@@ -10,5 +11,17 @@ public class KategorijaManager {
 
     }
 
-    
+    public Kategorija dodajKategoriju(Kategorija kat) throws CeraVeException{
+        if (kat.getId() != 0)
+            throw new CeraVeException("ID kategorije se automatski generiše !");
+        validacijaImenaKategorije(kat.getIme());
+
+        try {
+            return DaoFactory.kategorijaDao().add(kat);
+        } catch (CeraVeException e) {
+            if (e.getMessage().contains("UQ_NAME"))
+                throw new CeraVeException("Već postoji kategorija sa tim imenom !");
+            throw e;
+        }
+    }
 }
