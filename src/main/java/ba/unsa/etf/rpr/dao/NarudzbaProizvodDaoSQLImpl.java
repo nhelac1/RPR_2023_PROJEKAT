@@ -32,8 +32,8 @@ public class NarudzbaProizvodDaoSQLImpl extends AbstractDao<NarudzbaProizvod> im
         try {
             NarudzbaProizvod np = new NarudzbaProizvod();
             np.setId(rs.getInt("id"));
-            //np.setNarudzba();
-            //np.setProizvod();
+            np.setNarudzba(DaoFactory.narudzbaDao().getById(rs.getInt("id_narudzba")));
+            np.setProizvod(DaoFactory.proizvodDao().getById(rs.getInt("id_proizvod")));
             return np;
         } catch (Exception e) {
             throw new CeraVeException(e.getMessage(), e);
