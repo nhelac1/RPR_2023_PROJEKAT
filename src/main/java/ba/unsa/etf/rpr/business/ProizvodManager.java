@@ -27,4 +27,8 @@ public class ProizvodManager {
     public void azurirajProizvod(Proizvod p) throws CeraVeException {
         DaoFactory.proizvodDao().update(p);
     }
+
+    public Proizvod dodajProizvod (Proizvod p) throws CeraVeException {
+        return DaoFactory.proizvodDao().add(p);
+    }
 }
