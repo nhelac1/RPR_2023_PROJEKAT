@@ -22,12 +22,12 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                 String url = p.getProperty("db.server");
                 String username = p.getProperty("db.username");
                 String password = p.getProperty("db.password");
+                //ovdje baca error
                 AbstractDao.connection = DriverManager.getConnection(url, username, password);
             } catch (Exception e) {
                 e.printStackTrace();
             }finally {
                 Runtime.getRuntime().addShutdownHook(new Thread(){
-                    @Override
                     public void run(){
                         try {
                             connection.close();
