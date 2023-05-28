@@ -135,24 +135,28 @@ public class RegistracijaController {
                 Connection connection = DriverManager.getConnection(string1, string2, string3);
                 System.out.println(string1 + " " + string2 + " " + string3);
 
-                Stage stage = (Stage) btnRegistracija.getScene().getWindow();
-                stage.close();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/potvrdaR.fxml"));
-                fxmlLoader.setController(new PotvrdaRegistracijeController());
-                Parent root = fxmlLoader.load();
-                stage.setScene(new Scene(root, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE));
-                stage.setResizable(false);
-                stage.show();
+                Korisnik noviK = korisnikManager.dodajKorisnika(k);
+
+                try {
+                    Stage stage = (Stage) btnRegistracija.getScene().getWindow();
+                    stage.close();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/potvrdaR.fxml"));
+                    fxmlLoader.setController(new PotvrdaRegistracijeController());
+                    Parent root = fxmlLoader.load();
+                    stage.setScene(new Scene(root, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE));
+                    stage.setResizable(false);
+                    stage.show();
+
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
+                connection.close();
 
             }catch (Exception e) {
                 e.printStackTrace();
             }
 
-            /*try {
 
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            }*/
         }
     }
     public void actionOtkazi(ActionEvent actionEvent)
