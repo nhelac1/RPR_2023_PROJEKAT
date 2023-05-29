@@ -102,7 +102,11 @@ public class RegistracijaController {
         if (Objects.equals(idPassword.getText(), "")) {
             idLabel9.setText("Polje ne može biti prazno !");
             brojac++;
-        } else {
+        } else if (idPassword.getText().length() < 8) {
+            idLabel9.setText("Password mora sadržavati 8 karaktera !");
+            brojac++;
+        }
+        else {
             idLabel9.setText("");
         }
 

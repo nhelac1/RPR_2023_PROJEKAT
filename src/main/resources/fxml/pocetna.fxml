@@ -78,11 +78,7 @@
                         <Insets left="80.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="idEmail" minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </TextField>
+                  <TextField fx:id="idEmail" minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="btnRegistracija" mnemonicParsing="false" onAction="#actionRegistracija" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="REGISTRUJ SE" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="85.0" />
@@ -99,10 +95,7 @@
                         <Insets left="80.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <PasswordField fx:id="idPassword" minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding></PasswordField>
+                  <PasswordField fx:id="idPassword" minHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Label fx:id="idLabel4" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
