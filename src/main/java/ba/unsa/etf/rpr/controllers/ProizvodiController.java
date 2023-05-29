@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.business.ProizvodManager;
 import ba.unsa.etf.rpr.domain.Proizvod;
+import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,7 +39,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class ProizvodiController {
     public Button btnOdjava;
     @FXML private Accordion idKategorije;
-    @FXML private TitledPane idKremeZaLice;
+    @FXML private TitledPane idKremeZaLice, idCistaciZaLice, idKremeZaTijelo;
     @FXML private TableView<Proizvod> idPrikaz1, idPrikaz2, idPrikaz3;
     @FXML private TableColumn<Proizvod, String> idNaziv1, idNaziv2, idNaziv3;
     @FXML private TableColumn<Proizvod, String> idNamjena1, idNamjena2, idNamjena3;
@@ -46,16 +48,22 @@ public class ProizvodiController {
     private final ObservableList<Proizvod> data2 = FXCollections.observableArrayList();
     private final ObservableList<Proizvod> data3 = FXCollections.observableArrayList();
 
+    private final ProizvodManager proizvodManager = new ProizvodManager();
     @FXML public void initialize() {
-        idNaziv1.setCellValueFactory(new PropertyValueFactory<>("ime"));
-        idNamjena1.setCellValueFactory(new PropertyValueFactory<>("namjena"));
-        idCijena1.setCellValueFactory(new PropertyValueFactory<>("cijena"));
+        idNaziv1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
+        idNamjena1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
+        idCijena1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
 
-        Proizvod p = new Proizvod("Moistirusing Cream", "za suhe i ispucale ruke", "22 KM");
-        data1.add(p);
-        idPrikaz1.setItems(data1);
+        prikaziProizvode();
 
-
+    }
+    void prikaziProizvode() {
+        try {
+            idPrikaz1.setItems(FXCollections.observableList(proizvodManager.dajSveProizvode()));
+            idPrikaz1.refresh();
+        }catch (CeraVeException e) {
+            e.printStackTrace();
+        }
     }
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {

@@ -96,7 +96,7 @@
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                 </TitledPane>
-                <TitledPane animated="false" text="Čistači za lice" textFill="#10006c">
+                <TitledPane fx:id="idCistaciZaLice" animated="false" text="Čistači za lice" textFill="#10006c">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -113,7 +113,7 @@
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                 </TitledPane>
-                <TitledPane animated="false" text="Kreme za tijelo" textFill="#10006c">
+                <TitledPane fx:id="idKremeZaTijelo" animated="false" text="Kreme za tijelo" textFill="#10006c">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
