@@ -96,11 +96,11 @@
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                 </TitledPane>
-                <TitledPane fx:id="idCistaciZaLice" animated="false" text="Čistači za lice" textFill="#10006c">
+                <TitledPane fx:id="idCistaciZaLice" animated="false" text="Cistaci za lice" textFill="#10006c">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="idPrikaz11" prefHeight="355.0" prefWidth="471.0">
+                              <TableView fx:id="idPrikaz2" prefHeight="355.0" prefWidth="471.0">
                                  <columns>
                                     <TableColumn fx:id="idNaziv2" prefWidth="156.00000876188278" resizable="false" text="Naziv" />
                                     <TableColumn fx:id="idNamjena2" prefWidth="206.40000915527344" resizable="false" text="Namjena" />
@@ -117,7 +117,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="idPrikaz111" prefHeight="355.0" prefWidth="471.0">
+                              <TableView fx:id="idPrikaz3" prefHeight="355.0" prefWidth="471.0">
                                  <columns>
                                     <TableColumn fx:id="idNaziv3" prefWidth="156.00000876188278" text="Naziv" />
                                     <TableColumn fx:id="idNamjena3" prefWidth="206.40000915527344" text="Namjena" />

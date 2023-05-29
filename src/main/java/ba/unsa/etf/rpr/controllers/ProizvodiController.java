@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.business.KategorijaManager;
 import ba.unsa.etf.rpr.business.ProizvodManager;
+import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.beans.property.SimpleStringProperty;
@@ -26,6 +28,7 @@ import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -49,18 +52,47 @@ public class ProizvodiController {
     private final ObservableList<Proizvod> data3 = FXCollections.observableArrayList();
 
     private final ProizvodManager proizvodManager = new ProizvodManager();
-    @FXML public void initialize() {
+    private final KategorijaManager kategorijaManager = new KategorijaManager();
+
+
+    @FXML public void initialize() throws CeraVeException {
         idNaziv1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
         idNamjena1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
         idCijena1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
+
+        idNaziv2.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
+        idNamjena2.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
+        idCijena2.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
+
+        idNaziv3.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
+        idNamjena3.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
+        idCijena3.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
 
         prikaziProizvode();
 
     }
     void prikaziProizvode() {
         try {
-            idPrikaz1.setItems(FXCollections.observableList(proizvodManager.dajSveProizvode()));
-            idPrikaz1.refresh();
+            List<Kategorija> listaKategorija =  kategorijaManager.dajSveKategorije();
+            for (Kategorija kat : listaKategorija) {
+                if (kat.getIme().equals("Kreme za lice")) {
+                    System.out.println("radi1");
+                    System.out.println(kat.getId());
+                    idPrikaz1.setItems(FXCollections.observableList(proizvodManager.pronadjiProizvodPoKategoriji(kat)));
+                    idPrikaz1.refresh();
+                } else if (kat.getIme().equals("Cistaci za lice")) {
+                    System.out.println("radi2");
+                    System.out.println(kat.getId());
+                    idPrikaz2.setItems(FXCollections.observableList(proizvodManager.pronadjiProizvodPoKategoriji(kat)));
+                    idPrikaz2.refresh();
+                } else if (kat.getIme().equals("Kreme za tijelo")) {
+                    System.out.println("radi3");
+                    System.out.println(kat.getId());
+                    idPrikaz3.setItems(FXCollections.observableList(proizvodManager.pronadjiProizvodPoKategoriji(kat)));
+                    idPrikaz3.refresh();
+                }
+            }
+
         }catch (CeraVeException e) {
             e.printStackTrace();
         }
