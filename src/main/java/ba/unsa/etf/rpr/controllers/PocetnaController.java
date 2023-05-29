@@ -1,6 +1,9 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.business.KorisnikManager;
+import ba.unsa.etf.rpr.domain.Korisnik;
+import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -23,16 +27,32 @@ public class PocetnaController {
     public TextField idEmail;
     public PasswordField idPassword;
     public Label idLabel4;
+    KorisnikManager korisnikManager = new KorisnikManager();
 
-    public void actionPrijava(ActionEvent actionEvent) throws IOException {
-        int brojac = 0;
+    public void actionPrijava(ActionEvent actionEvent) throws CeraVeException {
+        String uneseniEmail = idEmail.getText();
+        String uneseniPassword = idPassword.getText();
+        List<Korisnik> listaPrijavljenihKorisnika = korisnikManager.dajSveKorisnike();
+        Model modelKorisnik = Model.getInstance();
+        int brojac = 0, brojac1 = 0;
+
         if (Objects.equals(idPassword.getText(), "") || Objects.equals(idEmail.getText(), "")) {
             idLabel4.setText("Polje ne može biti prazno !");
             brojac++;
         } else {
-            idLabel4.setText("");
+            for (Korisnik k : listaPrijavljenihKorisnika) {
+                if (k.getEmail().equals(uneseniEmail) && k.getPassword().equals(uneseniPassword)) {
+                    brojac1++;
+                    modelKorisnik.setKorisnik(k);
+                }
+            }
+            if (brojac1 != 0)
+                idLabel4.setText("");
+            else
+                idLabel4.setText("Neispravni uneseni podaci!");
         }
-        if (brojac == 0) {
+
+        if (brojac == 0 && brojac1 != 0) {
             try {
                 Stage stage =(Stage)btnPrijava.getScene().getWindow();
                 stage.close();
@@ -45,7 +65,7 @@ public class PocetnaController {
                 stage1.setScene(scene);
                 stage1.setResizable(false);
                 stage1.show();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }

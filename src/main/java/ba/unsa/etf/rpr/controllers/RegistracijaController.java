@@ -74,30 +74,30 @@ public class RegistracijaController {
         String uneseniPassword = idPassword.getText();
 
         int brojac = 0, brojac1 = 0;
-        if (Objects.equals(idIme.getText(), "")) {
+        if (Objects.equals(unesenoIme, "")) {
             idLabel5.setText("Polje ne može biti prazno !");
             brojac++;
         } else {
             idLabel5.setText("");
         }
-        if (Objects.equals(idPrezime.getText(), "")) {
+        if (Objects.equals(unesenoPrezime, "")) {
             idLabel6.setText("Polje ne može biti prazno !");
             brojac++;
         } else {
             idLabel6.setText("");
         }
-        if (Objects.equals(idAdresa.getText(), "")) {
+        if (Objects.equals(unesenaAdresa, "")) {
             idLabel7.setText("Polje ne može biti prazno !");
             brojac++;
         } else {
             idLabel7.setText("");
         }
-        if (Objects.equals(idEmail.getText(), "")) {
+        if (Objects.equals(uneseniEmail, "")) {
             idLabel8.setText("Polje ne može biti prazno !");
             brojac++;
         } else {
             for (Korisnik k : listaRegKorisnika) {
-                if (k.getEmail().equals(idEmail.getText())) {
+                if (k.getEmail().equals(uneseniEmail)) {
                     brojac++; //ako postoji vec isti email
                     brojac1++;
                     idLabel8.setText("Korisnik sa tim emailom već postoji !");
@@ -108,7 +108,7 @@ public class RegistracijaController {
         }
 
 
-        if (Objects.equals(idPassword.getText(), "")) {
+        if (Objects.equals(uneseniPassword, "")) {
             idLabel9.setText("Polje ne može biti prazno !");
             brojac++;
         } else if (idPassword.getText().length() < 8) {
