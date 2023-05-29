@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -19,6 +20,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -60,16 +62,62 @@ public class ProizvodiController {
         idNamjena1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
         idCijena1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
 
+        viselinijskiPrikaz(idNaziv1);
+        viselinijskiPrikaz(idNamjena1);
+        /*idNaziv1.setCellFactory(column -> {
+            return new TableCell<Proizvod, String>() {
+                @Override
+                protected void updateItem(String item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (item != null) {
+                        Text text = new Text(item);
+                        text.wrappingWidthProperty().bind(idNaziv1.widthProperty());
+                        text.textProperty().bind(itemProperty());
+
+                        setGraphic(text);
+                    } else {
+                        setGraphic(null);
+                    }
+                }
+            };
+        });*/
+
+
         idNaziv2.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
         idNamjena2.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
         idCijena2.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
+
+        viselinijskiPrikaz(idNaziv2);
+        viselinijskiPrikaz(idNamjena2);
 
         idNaziv3.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
         idNamjena3.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("namjena"));
         idCijena3.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("cijena"));
 
+        viselinijskiPrikaz(idNaziv3);
+        viselinijskiPrikaz(idNamjena3);
+        
         prikaziProizvode();
 
+    }
+    void viselinijskiPrikaz(TableColumn<Proizvod, String> column) {
+        column.setCellFactory(col -> {
+            return new TableCell<Proizvod, String>() {
+                @Override
+                protected void updateItem(String item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (item != null) {
+                        Text text = new Text(item);
+                        text.wrappingWidthProperty().bind(column.widthProperty());
+                        text.textProperty().bind(itemProperty());
+
+                        setGraphic(text);
+                    } else {
+                        setGraphic(null);
+                    }
+                }
+            };
+        });
     }
     void prikaziProizvode() {
         try {
@@ -78,6 +126,7 @@ public class ProizvodiController {
                 if (kat.getIme().equals("Kreme za lice")) {
                     System.out.println("radi1");
                     System.out.println(kat.getId());
+
                     idPrikaz1.setItems(FXCollections.observableList(proizvodManager.pronadjiProizvodPoKategoriji(kat)));
                     idPrikaz1.refresh();
                 } else if (kat.getIme().equals("Cistaci za lice")) {
