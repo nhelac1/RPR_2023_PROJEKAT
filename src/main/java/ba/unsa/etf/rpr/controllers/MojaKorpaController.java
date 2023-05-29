@@ -130,5 +130,14 @@ public class MojaKorpaController {
         Button btn = (Button) event.getSource();
         btn.setStyle("-fx-background-color: rgb(36,140,255);");
     }
-
+    @FXML
+    public void promjenaBojeC(MouseEvent event) {
+        Button btn = (Button) event.getSource();
+        btn.setStyle("-fx-background-color: rgb(255,191,191); -fx-background-radius:10px;");
+    }
+    @FXML
+    public void promjenaBojeZ(MouseEvent event) {
+        Button btn = (Button) event.getSource();
+        btn.setStyle("-fx-background-color: rgb(191,255,191); -fx-background-radius:10px;");
+    }
 }

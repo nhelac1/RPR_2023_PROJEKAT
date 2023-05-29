@@ -16,7 +16,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import ba.unsa.etf.rpr.business.KorisnikManager;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
@@ -120,14 +119,6 @@ public class RegistracijaController {
             idLabel9.setText("");
         }
 
-        /*if(brojac == 0) {
-            for (Korisnik k : listaRegKorisnika) {
-                if (k.getEmail().equals(idEmail.getText()))
-                    brojac1++; //ako postoji vec isti email
-                    idLabel8.setText("Korisnik sa tim emailom već postoji !");
-            }
-        }*/
-
         if (brojac == 0 && brojac1 == 0) {
             Korisnik k = new Korisnik();
             k.setIme(unesenoIme);
@@ -159,13 +150,13 @@ public class RegistracijaController {
                     stage.setResizable(false);
                     stage.show();
 
-                } catch (IOException e) {
-                    System.out.println(e.getMessage());
+                } catch (Exception e1) {
+                    System.out.println(e1.getMessage());
                 }
                 connection.close();
 
-            }catch (Exception e) {
-                e.printStackTrace();
+            }catch (Exception e2) {
+                e2.printStackTrace();
             }
 
 
