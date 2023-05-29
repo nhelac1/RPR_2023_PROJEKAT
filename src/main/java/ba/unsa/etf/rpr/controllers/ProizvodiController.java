@@ -96,7 +96,7 @@ public class ProizvodiController {
 
         viselinijskiPrikaz(idNaziv3);
         viselinijskiPrikaz(idNamjena3);
-        
+
         prikaziProizvode();
 
     }
@@ -110,7 +110,6 @@ public class ProizvodiController {
                         Text text = new Text(item);
                         text.wrappingWidthProperty().bind(column.widthProperty());
                         text.textProperty().bind(itemProperty());
-
                         setGraphic(text);
                     } else {
                         setGraphic(null);

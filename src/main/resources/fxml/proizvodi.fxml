@@ -84,9 +84,9 @@
                            <children>
                               <TableView fx:id="idPrikaz1" layoutY="-2.0" prefHeight="355.0" prefWidth="471.0">
                                 <columns>
-                                  <TableColumn fx:id="idNaziv1" editable="false" prefWidth="156.00000876188278" resizable="false" text="Naziv" />
-                                  <TableColumn fx:id="idNamjena1" editable="false" prefWidth="206.40000915527344" resizable="false" text="Namjena" />
-                                    <TableColumn fx:id="idCijena1" editable="false" prefWidth="86.0" resizable="false" text="Cijena" />
+                                  <TableColumn fx:id="idNaziv1" editable="false" prefWidth="156.00000876188278" resizable="false" style="-fx-padding: 7px;" text="Naziv" />
+                                  <TableColumn fx:id="idNamjena1" editable="false" prefWidth="218.1999969482422" resizable="false" style="-fx-padding: 7px;" text="Namjena" />
+                                    <TableColumn fx:id="idCijena1" editable="false" prefWidth="75.0" resizable="false" style="-fx-padding: 7px;" text="Cijena" />
                                 </columns>
                               </TableView>
                            </children>
@@ -102,9 +102,9 @@
                            <children>
                               <TableView fx:id="idPrikaz2" prefHeight="355.0" prefWidth="471.0">
                                  <columns>
-                                    <TableColumn fx:id="idNaziv2" editable="false" prefWidth="156.00000876188278" resizable="false" text="Naziv" />
-                                    <TableColumn fx:id="idNamjena2" editable="false" prefWidth="206.40000915527344" resizable="false" text="Namjena" />
-                                    <TableColumn fx:id="idCijena2" editable="false" prefWidth="86.0" resizable="false" text="Cijena" />
+                                    <TableColumn fx:id="idNaziv2" editable="false" prefWidth="156.00000876188278" resizable="false" style="-fx-padding: 7px;" text="Naziv" />
+                                    <TableColumn fx:id="idNamjena2" editable="false" prefWidth="213.1999969482422" resizable="false" style="-fx-padding: 7px;" text="Namjena" />
+                                    <TableColumn fx:id="idCijena2" editable="false" prefWidth="77.20001220703125" resizable="false" style="-fx-padding: 7px;" text="Cijena" />
                                  </columns>
                               </TableView>
                            </children></AnchorPane>
@@ -119,9 +119,9 @@
                            <children>
                               <TableView fx:id="idPrikaz3" prefHeight="355.0" prefWidth="471.0">
                                  <columns>
-                                    <TableColumn fx:id="idNaziv3" editable="false" prefWidth="156.00000876188278" resizable="false" text="Naziv" />
-                                    <TableColumn fx:id="idNamjena3" editable="false" prefWidth="206.40000915527344" resizable="false" text="Namjena" />
-                                    <TableColumn fx:id="idCijena3" editable="false" prefWidth="86.0" resizable="false" text="Cijena" />
+                                    <TableColumn fx:id="idNaziv3" editable="false" prefWidth="156.00000876188278" resizable="false" style="-fx-padding: 7px;" text="Naziv" />
+                                    <TableColumn fx:id="idNamjena3" editable="false" prefWidth="216.0000457763672" resizable="false" style="-fx-padding: 7px;" text="Namjena" />
+                                    <TableColumn fx:id="idCijena3" editable="false" prefWidth="77.5999755859375" resizable="false" style="-fx-padding: 7px;" text="Cijena" />
                                  </columns>
                               </TableView>
                            </children></AnchorPane>
