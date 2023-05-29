@@ -74,7 +74,7 @@ public class RegistracijaController {
         String uneseniEmail = idEmail.getText();
         String uneseniPassword = idPassword.getText();
 
-        int brojac = 0;
+        int brojac = 0, brojac1 = 0;
         if (Objects.equals(idIme.getText(), "")) {
             idLabel5.setText("Polje ne može biti prazno !");
             brojac++;
@@ -97,8 +97,18 @@ public class RegistracijaController {
             idLabel8.setText("Polje ne može biti prazno !");
             brojac++;
         } else {
-            idLabel8.setText("");
+            for (Korisnik k : listaRegKorisnika) {
+                if (k.getEmail().equals(idEmail.getText())) {
+                    brojac++; //ako postoji vec isti email
+                    brojac1++;
+                    idLabel8.setText("Korisnik sa tim emailom već postoji !");
+                }
+            }
+            if (brojac1 == 0)
+                idLabel8.setText("");
         }
+
+
         if (Objects.equals(idPassword.getText(), "")) {
             idLabel9.setText("Polje ne može biti prazno !");
             brojac++;
@@ -110,17 +120,15 @@ public class RegistracijaController {
             idLabel9.setText("");
         }
 
-        if(!idIme.getText().isEmpty()
-                && !idPrezime.getText().isEmpty()
-                && !idAdresa.getText().isEmpty()
-                && !idEmail.getText().isEmpty()
-                && !idPassword.getText().isEmpty()) {
+        /*if(brojac == 0) {
             for (Korisnik k : listaRegKorisnika) {
-                if (k.getEmail().equals(idEmail.getText()) && k.getPassword().equals(idPassword.getText()))
-                    brojac++;
+                if (k.getEmail().equals(idEmail.getText()))
+                    brojac1++; //ako postoji vec isti email
+                    idLabel8.setText("Korisnik sa tim emailom već postoji !");
             }
-        }
-        if (brojac == 0) {
+        }*/
+
+        if (brojac == 0 && brojac1 == 0) {
             Korisnik k = new Korisnik();
             k.setIme(unesenoIme);
             k.setPrezime(unesenoPrezime);
