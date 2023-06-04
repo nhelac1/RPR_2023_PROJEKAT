@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,13 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class MojaKorpaController {
     public Button btnOdjava, btnZatvori, btnNaruci;
     public Label idLabel1, idLabel2, idLabel3, idLabel10;
+
+    @FXML public void initialize() throws CeraVeException {
+        idLabel1.setText(ProizvodiController.selektovaniProizvod.getIme());
+        System.out.println(ProizvodiController.selektovaniProizvod.getIme());
+        idLabel2.setText(ProizvodiController.selektovaniProizvod.getCijena());
+        idLabel10.setText(ProizvodiController.selektovaniProizvod.getNamjena());
+    }
 
 
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {

@@ -107,19 +107,21 @@ public class ProizvodiController {
             Proizvod selektovani3 = idPrikaz3.getSelectionModel().getSelectedItem();
             Model model = Model.getInstance();
             if (selektovani1 != null || selektovani2 != null || selektovani3 != null) {
+                if (selektovani1 != null) {
+                    selektovaniProizvod = selektovani1;
+                    idPrikaz1.getSelectionModel().clearSelection();
+                } else if (selektovani2 != null) {
+                    selektovaniProizvod = selektovani2;
+                    idPrikaz2.getSelectionModel().clearSelection();
+                } else if (selektovani3 != null) {
+                    selektovaniProizvod = selektovani3;
+                    idPrikaz3.getSelectionModel().clearSelection();
+                }
+                model.setProizvod(selektovaniProizvod);
+                System.out.println(selektovaniProizvod.getIme());
                 try {
                     idLabelSelektovanje.setText("");
                     actionOtvaranjeKorpe(event);
-                    if (selektovani1 != null) {
-                        model.setProizvod(selektovani1);
-                        idPrikaz1.getSelectionModel().clearSelection();
-                    } else if (selektovani2 != null) {
-                        model.setProizvod(selektovani2);
-                        idPrikaz2.getSelectionModel().clearSelection();
-                    } else if (selektovani3 != null) {
-                        model.setProizvod(selektovani3);
-                        idPrikaz3.getSelectionModel().clearSelection();
-                    }
                 } catch(Exception e) {
                     e.printStackTrace();
                 }

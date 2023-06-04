@@ -81,7 +81,7 @@
                   <Insets left="102.0" right="102.0" />
                </GridPane.margin>
                <children>
-                  <Label fx:id="idLabel1" text="NEKA KREMA" textFill="WHITE" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                  <Label fx:id="idLabel1" textFill="WHITE" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
                         <Insets bottom="10.0" />
                      </GridPane.margin>
@@ -105,7 +105,7 @@
                         <Font name="Times New Roman" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="idLabel2" text="XXXX KM" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Label fx:id="idLabel2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
