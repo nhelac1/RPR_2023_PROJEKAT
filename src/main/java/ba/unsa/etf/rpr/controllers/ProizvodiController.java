@@ -109,7 +109,7 @@ public class ProizvodiController {
                 try {
                     idLabelSelektovanje.setText("");
                     actionOtvaranjeKorpe(event);
-                    
+                    idPrikaz1.getSelectionModel().clearSelection();
                 } catch(Exception e) {
                     e.printStackTrace();
                 }
