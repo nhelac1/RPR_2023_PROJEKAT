@@ -15,8 +15,8 @@
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="62.400000000000006" minHeight="10.0" prefHeight="44.4" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="113.40000190734864" minHeight="10.0" prefHeight="52.79999618530273" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="113.40000190734864" minHeight="10.0" prefHeight="46.80000381469725" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.40000190734864" minHeight="10.0" prefHeight="54.8" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="113.40000190734864" minHeight="10.0" prefHeight="33.2" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="67.4" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
@@ -42,14 +42,20 @@
                             </GridPane.margin></ImageView>
                     </children>
                 </GridPane>
-                <Label text="Vaša narudžba je uspješno zabilježena !" textFill="#479f36" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <Label text="Vaša narudžba je uspješno zabilježena !" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                     <font>
-                        <Font name="Times New Roman Bold Italic" size="14.0" />
+                        <Font name="Times New Roman Italic" size="14.0" />
                     </font></Label>
-            <Label fx:id="idLabel11" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Label fx:id="idLabel11" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
             </Label>
             </children>
         </GridPane>
