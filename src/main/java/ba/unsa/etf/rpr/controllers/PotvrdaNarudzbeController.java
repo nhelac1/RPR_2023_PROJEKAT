@@ -1,9 +1,11 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -11,7 +13,12 @@ import javafx.stage.Stage;
 
 public class PotvrdaNarudzbeController {
     public Button btnZatvori;
+    public Label idLabel11;
 
+    @FXML public void initialize() throws CeraVeException {
+        Model model = Model.getInstance();
+        idLabel11.setText("Hvala, " + model.getKorisnik().getIme() + " " + model.getKorisnik().getPrezime() + "!");
+    }
     public void actionZatvori(ActionEvent actionEvent)
     {
         Stage stage =(Stage)btnZatvori.getScene().getWindow();

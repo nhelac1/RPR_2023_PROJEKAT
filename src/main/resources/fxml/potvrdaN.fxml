@@ -44,16 +44,11 @@
                 </GridPane>
                 <Label text="Vaša narudžba je uspješno zabilježena !" textFill="#479f36" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                     <font>
-                        <Font name="Times New Roman Bold Italic" size="15.0" />
+                        <Font name="Times New Roman Bold Italic" size="14.0" />
                     </font></Label>
-            <Label text="Hvala, " GridPane.rowIndex="1">
+            <Label fx:id="idLabel11" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="130.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="50.0" />
+                  <Insets />
                </GridPane.margin>
             </Label>
             </children>
