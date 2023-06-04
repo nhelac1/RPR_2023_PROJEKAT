@@ -57,6 +57,7 @@ public class ProizvodiController {
     private final ProizvodManager proizvodManager = new ProizvodManager();
     private final KategorijaManager kategorijaManager = new KategorijaManager();
 
+    public static Proizvod selektovaniProizvod = new Proizvod();
 
     @FXML public void initialize() throws CeraVeException {
         idNaziv1.setCellValueFactory(new PropertyValueFactory<Proizvod, String>("ime"));
@@ -104,16 +105,19 @@ public class ProizvodiController {
             Proizvod selektovani1 = idPrikaz1.getSelectionModel().getSelectedItem();
             Proizvod selektovani2 = idPrikaz2.getSelectionModel().getSelectedItem();
             Proizvod selektovani3 = idPrikaz3.getSelectionModel().getSelectedItem();
-
+            Model model = Model.getInstance();
             if (selektovani1 != null || selektovani2 != null || selektovani3 != null) {
                 try {
                     idLabelSelektovanje.setText("");
                     actionOtvaranjeKorpe(event);
                     if (selektovani1 != null) {
+                        model.setProizvod(selektovani1);
                         idPrikaz1.getSelectionModel().clearSelection();
                     } else if (selektovani2 != null) {
+                        model.setProizvod(selektovani2);
                         idPrikaz2.getSelectionModel().clearSelection();
                     } else if (selektovani3 != null) {
+                        model.setProizvod(selektovani3);
                         idPrikaz3.getSelectionModel().clearSelection();
                     }
                 } catch(Exception e) {
