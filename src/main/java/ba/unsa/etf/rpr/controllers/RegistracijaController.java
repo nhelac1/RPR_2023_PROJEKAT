@@ -170,6 +170,8 @@ public class RegistracijaController {
     public void actionZatvori(ActionEvent actionEvent)
     {
         try {
+            Stage stage =(Stage)btnZatvori.getScene().getWindow();
+            stage.close();
             Stage stage1 = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/pocetna.fxml"));
             PocetnaController pocetna = new PocetnaController();
