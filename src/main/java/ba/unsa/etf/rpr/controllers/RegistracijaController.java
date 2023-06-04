@@ -28,7 +28,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class RegistracijaController {
 
-    public Button btnOtkazi, btnRegistracija;
+    public Button btnOtkazi, btnRegistracija, btnZatvori;
     @FXML public TextField idIme, idPrezime, idAdresa, idEmail;
     public PasswordField idPassword;
     @FXML public Label idLabel5, idLabel6, idLabel7, idLabel8, idLabel9;
@@ -166,6 +166,22 @@ public class RegistracijaController {
     {
         Stage stage =(Stage)btnOtkazi.getScene().getWindow();
         stage.close();
+    }
+    public void actionZatvori(ActionEvent actionEvent)
+    {
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/pocetna.fxml"));
+            PocetnaController pocetna = new PocetnaController();
+            fxmlLoader.setController(pocetna);
+            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+            stage1.setTitle("Online CeraVe");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
     @FXML
     public void promjenaBoje(MouseEvent event) {
