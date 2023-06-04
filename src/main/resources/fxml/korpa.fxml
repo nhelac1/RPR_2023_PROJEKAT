@@ -17,8 +17,8 @@
             <rowConstraints>
                 <RowConstraints fx:id="prviRed" maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="61.8" vgrow="ALWAYS" />
                 <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="204.80000000000004" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="117.19999999999993" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="36.39999999999998" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="100.60000000000002" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="49.80000000000001" vgrow="ALWAYS" />
             <RowConstraints maxHeight="432.99999237060547" minHeight="10.0" prefHeight="67.19999999999999" vgrow="ALWAYS" />
                 <RowConstraints />
                 <RowConstraints />
@@ -74,8 +74,8 @@
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="34.4" minHeight="10.0" prefHeight="34.4" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.39999999999999" minHeight="10.0" prefHeight="38.39999999999999" vgrow="SOMETIMES" />
               </rowConstraints>
                <GridPane.margin>
                   <Insets left="102.0" right="102.0" />
@@ -83,7 +83,7 @@
                <children>
                   <Label fx:id="idLabel1" textFill="WHITE" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
-                        <Insets bottom="10.0" />
+                        <Insets bottom="5.0" />
                      </GridPane.margin>
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
@@ -91,7 +91,7 @@
                   </Label>
                   <Label text="Naziv proizvoda:" textFill="WHITE" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
-                        <Insets bottom="10.0" left="30.0" />
+                        <Insets bottom="5.0" left="30.0" />
                      </GridPane.margin>
                      <font>
                         <Font name="Times New Roman" size="15.0" />
@@ -99,7 +99,7 @@
                   </Label>
                   <Label text="Cijena proizvoda:" textFill="WHITE" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
-                        <Insets left="30.0" top="10.0" />
+                        <Insets left="30.0" top="5.0" />
                      </GridPane.margin>
                      <font>
                         <Font name="Times New Roman" size="15.0" />
@@ -107,13 +107,13 @@
                   </Label>
                   <Label fx:id="idLabel2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
                      </GridPane.margin>
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="idLabel10" textAlignment="CENTER" textFill="#2700d2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="idLabel10" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Times New Roman Italic" size="14.0" />
                      </font></Label>
