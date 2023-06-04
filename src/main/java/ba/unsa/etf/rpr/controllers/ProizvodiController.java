@@ -43,6 +43,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class ProizvodiController {
     public Button btnOdjava, btnDodaj;
+    public Label idLabelSelektovanje;
     @FXML private Accordion idKategorije;
     @FXML private TitledPane idKremeZaLice, idCistaciZaLice, idKremeZaTijelo;
     @FXML private TableView<Proizvod> idPrikaz1, idPrikaz2, idPrikaz3;
@@ -103,20 +104,13 @@ public class ProizvodiController {
             Proizvod selektovani = idPrikaz1.getSelectionModel().getSelectedItem();
             if (selektovani != null) {
                 try {
+                    idLabelSelektovanje.setText("");
                     actionOtvaranjeKorpe(event);
-                    /*Stage stage1 = new Stage();
-                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/korpa.fxml"));
-                    MojaKorpaController korpa = new MojaKorpaController();
-                    fxmlLoader.setController(korpa);
-                    Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
-                    stage1.setTitle("Moja CeraVe korpa");
-                    stage1.setScene(scene);
-                    stage1.setResizable(false);
-                    stage1.show();*/
-
                 } catch(Exception e) {
                     e.printStackTrace();
                 }
+            } else if (selektovani == null) {
+                idLabelSelektovanje.setText("Nijedan proizvod nije odabran!");
             }
         });
 
