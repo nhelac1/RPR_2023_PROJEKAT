@@ -16,7 +16,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MojaKorpaController {
     public Button btnOdjava, btnZatvori, btnNaruci;
-    public Label idLabel1, idLabel2, idLabel3;
+    public Label idLabel1, idLabel2, idLabel3, idLabel10;
 
 
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
@@ -82,11 +82,12 @@ public class MojaKorpaController {
 
         idLabel1.setText("");
         idLabel2.setText("");
+        idLabel10.setText("");
     }
 
     public void actionNaruciProizvod(ActionEvent actionEvent) {
 
-        if (idLabel1.getText() == "" && idLabel2.getText() == "")
+        if (idLabel1.getText() == "" && idLabel2.getText() == "" && idLabel10.getText() == "")
             idLabel3.setText("U korpi ne postoji nijedan proizvod za naručiti !");
         else {
             try {
