@@ -1,6 +1,11 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.HelloApplication;
+import ba.unsa.etf.rpr.business.NarudzbaManager;
+import ba.unsa.etf.rpr.business.NarudzbaProizvodManager;
+import ba.unsa.etf.rpr.business.ProizvodManager;
+import ba.unsa.etf.rpr.domain.Narudzba;
+import ba.unsa.etf.rpr.domain.NarudzbaProizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -19,11 +25,17 @@ public class MojaKorpaController {
     public Button btnOdjava, btnZatvori, btnNaruci;
     public Label idLabel1, idLabel2, idLabel3, idLabel10;
 
+    NarudzbaManager narudzbaManager = new NarudzbaManager();
+
+
     @FXML public void initialize() throws CeraVeException {
         idLabel1.setText(ProizvodiController.selektovaniProizvod.getIme());
         System.out.println(ProizvodiController.selektovaniProizvod.getIme());
         idLabel2.setText(ProizvodiController.selektovaniProizvod.getCijena());
         idLabel10.setText(ProizvodiController.selektovaniProizvod.getNamjena());
+        Model model = Model.getInstance();
+        System.out.println(model.getKorisnik().getIme());
+        System.out.println(model.getProizvod().getCijena());
     }
 
 
@@ -93,12 +105,28 @@ public class MojaKorpaController {
         idLabel10.setText("");
     }
 
+    public void zabiljeziNarudzbu() throws CeraVeException {
+        Model model = Model.getInstance();
+        Narudzba narudzba = new Narudzba();
+        NarudzbaProizvod srednja = new NarudzbaProizvod();
+
+        narudzba.setKorisnik(model.getKorisnik());
+        narudzba.setCijena(model.getProizvod().getCijena());
+        narudzbaManager.dodajNarudzbu(narudzba);
+        model.setNarudzba(narudzba);
+        srednja.setNarudzba(model.getNarudzba());
+        srednja.setProizvod(model.getProizvod());
+
+        NarudzbaProizvodManager narProManager = new NarudzbaProizvodManager();
+        narProManager.dodajNP(srednja);
+    }
     public void actionNaruciProizvod(ActionEvent actionEvent) {
 
         if (idLabel1.getText() == "" && idLabel2.getText() == "" && idLabel10.getText() == "")
             idLabel3.setText("U korpi ne postoji nijedan proizvod za naručiti !");
         else {
             try {
+                zabiljeziNarudzbu();
                 Stage stage =(Stage)btnNaruci.getScene().getWindow();
                 stage.close();
                 Stage stage1 = new Stage();
@@ -110,7 +138,7 @@ public class MojaKorpaController {
                 stage1.setScene(scene);
                 stage1.setResizable(false);
                 stage1.show();
-            } catch (IOException e) {
+            } catch (IOException | CeraVeException e) {
                 System.out.println(e.getMessage());
             }
         }
