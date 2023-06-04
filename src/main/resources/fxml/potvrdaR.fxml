@@ -41,10 +41,13 @@
                      </GridPane.margin></ImageView>
                </children>
             </GridPane>
-            <Label text="Uspješno ste registrovani !" textFill="#479f36" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Label text="Uspješno ste registrovani !" textFill="#10006c" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Times New Roman Bold Italic" size="15.0" />
-               </font></Label>
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin></Label>
          </children>
       </GridPane>
    </children>
