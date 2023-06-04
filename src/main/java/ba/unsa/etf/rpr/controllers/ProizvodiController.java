@@ -101,15 +101,19 @@ public class ProizvodiController {
         prikaziProizvode();
 
         btnDodaj.setOnAction(event -> {
-            Proizvod selektovani = idPrikaz1.getSelectionModel().getSelectedItem();
-            if (selektovani != null) {
+            Proizvod selektovani1 = idPrikaz1.getSelectionModel().getSelectedItem();
+            Proizvod selektovani2 = idPrikaz2.getSelectionModel().getSelectedItem();
+            Proizvod selektovani3 = idPrikaz3.getSelectionModel().getSelectedItem();
+
+            if (selektovani1 != null || selektovani2 != null || selektovani3 != null) {
                 try {
                     idLabelSelektovanje.setText("");
                     actionOtvaranjeKorpe(event);
+                    
                 } catch(Exception e) {
                     e.printStackTrace();
                 }
-            } else if (selektovani == null) {
+            } else if (selektovani1 == null && selektovani2 == null && selektovani3 == null) {
                 idLabelSelektovanje.setText("Nijedan proizvod nije odabran!");
             }
         });
