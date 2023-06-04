@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Narudzba implements Idable{
     private int id;
-    private float cijena;
+    private String cijena;
     private Korisnik korisnik;
 
     public int getId() {
@@ -15,11 +15,11 @@ public class Narudzba implements Idable{
         this.id = id;
     }
 
-    public float getCijena() {
+    public String getCijena() {
         return cijena;
     }
 
-    public void setCijena(float cijena) {
+    public void setCijena(String cijena) {
         this.cijena = cijena;
     }
 
