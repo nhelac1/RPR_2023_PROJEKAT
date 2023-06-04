@@ -68,7 +68,7 @@
                   </Button>
                     </children>
                 </GridPane>
-            <Button mnemonicParsing="false" onAction="#actionOtvaranjeKorpe" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="Dodaj u korpu" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <Button fx:id="btnDodaj" mnemonicParsing="false"  onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="Dodaj u korpu" textFill="#10006c" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>

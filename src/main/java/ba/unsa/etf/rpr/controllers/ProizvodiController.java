@@ -42,7 +42,7 @@ import javafx.util.Callback;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class ProizvodiController {
-    public Button btnOdjava;
+    public Button btnOdjava, btnDodaj;
     @FXML private Accordion idKategorije;
     @FXML private TitledPane idKremeZaLice, idCistaciZaLice, idKremeZaTijelo;
     @FXML private TableView<Proizvod> idPrikaz1, idPrikaz2, idPrikaz3;
@@ -98,6 +98,27 @@ public class ProizvodiController {
         viselinijskiPrikaz(idNamjena3);
 
         prikaziProizvode();
+
+        btnDodaj.setOnAction(event -> {
+            Proizvod selektovani = idPrikaz1.getSelectionModel().getSelectedItem();
+            if (selektovani != null) {
+                try {
+                    actionOtvaranjeKorpe(event);
+                    /*Stage stage1 = new Stage();
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/korpa.fxml"));
+                    MojaKorpaController korpa = new MojaKorpaController();
+                    fxmlLoader.setController(korpa);
+                    Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+                    stage1.setTitle("Moja CeraVe korpa");
+                    stage1.setScene(scene);
+                    stage1.setResizable(false);
+                    stage1.show();*/
+
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
     }
     void viselinijskiPrikaz(TableColumn<Proizvod, String> column) {
