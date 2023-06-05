@@ -20,6 +20,12 @@ public class Proizvod implements Idable{
         this.cijena = cijena;
     }
 
+    public Proizvod(String ime, String namjena, String cijena) {
+        this.ime = ime;
+        this.namjena = namjena;
+        this.cijena = cijena;
+    }
+
     public Proizvod(int id, String ime, String namjena, String cijena, Kategorija kategorija) {
         this.id = id;
         this.ime = ime;

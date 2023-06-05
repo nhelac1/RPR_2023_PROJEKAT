@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.business.NarudzbaProizvodManager;
 import ba.unsa.etf.rpr.business.ProizvodManager;
 import ba.unsa.etf.rpr.domain.Narudzba;
 import ba.unsa.etf.rpr.domain.NarudzbaProizvod;
+import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,6 +32,7 @@ public class MojaKorpaController {
     public Label idLabel1, idLabel2, idLabel3, idLabel10;
 
     NarudzbaManager narudzbaManager = new NarudzbaManager();
+    public static Proizvod proizvodIzKorpe = new Proizvod();
 
 
     @FXML public void initialize() throws CeraVeException {
@@ -132,6 +134,15 @@ public class MojaKorpaController {
         Model model = Model.getInstance();
         Narudzba narudzba = new Narudzba();
         NarudzbaProizvod srednja = new NarudzbaProizvod();
+
+        /**
+         * promjenjiva koja ce cuvati informacije o proizvodima
+         */
+        proizvodIzKorpe.setIme(idLabel1.getText());
+        proizvodIzKorpe.setNamjena(idLabel2.getText());
+        proizvodIzKorpe.setCijena(idLabel10.getText());
+
+        System.out.println(proizvodIzKorpe.getIme() + "radiii");
 
         narudzba.setKorisnik(model.getKorisnik());
         narudzba.setCijena(model.getProizvod().getCijena());
