@@ -13,6 +13,11 @@ import java.io.IOException;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora sa informacijama o CeraVe brendu
+ *
+ * @author Nedzla
+ */
 public class OBrenduController {
     public Button btnZatvori, btnPomoc;
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
