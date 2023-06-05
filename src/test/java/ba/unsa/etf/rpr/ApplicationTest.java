@@ -1,8 +1,18 @@
 package ba.unsa.etf.rpr;
 
+import ba.unsa.etf.rpr.business.ProizvodManager;
 import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Korisnik;
+import ba.unsa.etf.rpr.domain.Proizvod;
+import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.mockito.Mockito.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ApplicationTest {
@@ -10,6 +20,8 @@ public class ApplicationTest {
     Korisnik k2 = new Korisnik();
     Kategorija k3 = new Kategorija("Kreme za lice");
     Kategorija k4 = new Kategorija("Krema za lice");
+    Proizvod p1 = new Proizvod("Facial Moisturising Lotion", "Hidratantna krema za lice, 52ml", "28.20 KM");
+
     @Test
     public void Test1() {
         assertAll(
@@ -45,7 +57,11 @@ public class ApplicationTest {
 
     }
     @Test
-    public void Test5() {
+    public void Test5() throws CeraVeException {
+        ProizvodManager proizvodManager = mock(ProizvodManager.class);
+        List<Proizvod> sviProizvodi = Arrays.asList(p1);
+        when(proizvodManager.dajSveProizvode()).thenReturn(sviProizvodi);
+        assertTrue(proizvodManager.dajSveProizvode().contains(p1));
 
     }
     @Test
