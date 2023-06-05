@@ -29,13 +29,15 @@ public class MojaKorpaController {
 
 
     @FXML public void initialize() throws CeraVeException {
-        idLabel1.setText(ProizvodiController.selektovaniProizvod.getIme());
-        System.out.println(ProizvodiController.selektovaniProizvod.getIme());
-        idLabel2.setText(ProizvodiController.selektovaniProizvod.getCijena());
-        idLabel10.setText(ProizvodiController.selektovaniProizvod.getNamjena());
-        Model model = Model.getInstance();
+        if (ProizvodiController.selektovaniProizvod != null) {
+            idLabel1.setText(ProizvodiController.selektovaniProizvod.getIme());
+            idLabel2.setText(ProizvodiController.selektovaniProizvod.getCijena());
+            idLabel10.setText(ProizvodiController.selektovaniProizvod.getNamjena());
+        }
+
+        /*Model model = Model.getInstance();
         System.out.println(model.getKorisnik().getIme());
-        System.out.println(model.getProizvod().getCijena());
+        System.out.println(model.getProizvod().getCijena());*/
     }
 
 
@@ -100,9 +102,11 @@ public class MojaKorpaController {
 
     public void actionBrisanjeIzKorpe(ActionEvent actionEvent) {
 
+        ProizvodiController.selektovaniProizvod = null;
         idLabel1.setText("");
         idLabel2.setText("");
         idLabel10.setText("");
+
     }
 
     public void zabiljeziNarudzbu() throws CeraVeException {
