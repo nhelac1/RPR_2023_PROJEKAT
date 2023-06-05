@@ -118,11 +118,14 @@ public class MojaKorpaController {
      * @param actionEvent
      */
     public void actionBrisanjeIzKorpe(ActionEvent actionEvent) {
-
-        ProizvodiController.selektovaniProizvod = null;
-        idLabel1.setText("");
-        idLabel2.setText("");
-        idLabel10.setText("");
+        if (idLabel1.getText().equals("") && idLabel2.getText().equals("") && idLabel10.getText().equals(""))
+            idLabel3.setText("Korpa je već prazna, ne postoji proizvod za brisanje !");
+        else {
+            ProizvodiController.selektovaniProizvod = null;
+            idLabel1.setText("");
+            idLabel2.setText("");
+            idLabel10.setText("");
+        }
 
     }
 
