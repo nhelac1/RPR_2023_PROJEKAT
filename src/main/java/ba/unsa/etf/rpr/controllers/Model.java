@@ -2,6 +2,11 @@ package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.domain.*;
 
+/**
+ * Klasa za pohranjivanje trenutnog stanja aplikacije
+ *
+ * @author 
+ */
 public class Model {
     private static Model instance;
     private Kategorija kategorija;
