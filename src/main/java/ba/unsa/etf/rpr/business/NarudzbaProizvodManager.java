@@ -5,7 +5,11 @@ import ba.unsa.etf.rpr.domain.NarudzbaProizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.util.List;
-
+/**
+ * Sloj biznis logike za upravljanje narucenim proizvodima
+ *
+ * @author Nedzla
+ */
 public class NarudzbaProizvodManager {
     public NarudzbaProizvod dodajNP(NarudzbaProizvod np) throws CeraVeException {
         return DaoFactory.narProDao().add(np);
