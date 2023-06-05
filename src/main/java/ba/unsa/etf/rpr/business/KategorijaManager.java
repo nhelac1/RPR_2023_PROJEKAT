@@ -7,6 +7,11 @@ import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.util.List;
 
+/**
+ * Sloj biznis logike za upravljanje kategorijama
+ *
+ * @author Nedzla
+ */
 public class KategorijaManager {
     public void validacijaImenaKategorije(String ime) throws CeraVeException {
         if (ime == null || ime.length() < 5)
