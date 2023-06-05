@@ -6,7 +6,10 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-
+/**
+ * MySQL implementacija
+ * @author Nedzla
+ */
 public class KategorijaDaoSQLImpl extends AbstractDao<Kategorija> implements KategorijaDao {
     private static KategorijaDaoSQLImpl instance = null;
     private KategorijaDaoSQLImpl() {

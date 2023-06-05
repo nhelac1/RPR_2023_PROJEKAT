@@ -10,7 +10,7 @@ import ba.unsa.etf.rpr.exceptions.CeraVeException;
 /**
  * DAO interfejs za objekat Kategorija
  *
- * @author Nedzla 
+ * @author Nedzla
  */
 public interface KategorijaDao extends Dao<Kategorija> {
     List<Kategorija> pronadjiKategorijuPoID(String ime) throws CeraVeException;
