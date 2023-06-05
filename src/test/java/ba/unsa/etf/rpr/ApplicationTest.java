@@ -33,7 +33,7 @@ public class ApplicationTest {
     }
     @Test
     public void Test3() {
-
+        assertEquals(8, k1.getPassword().length(), "Password ne sadrži 8 znakova!");
     }
     @Test
     public void Test4() {
