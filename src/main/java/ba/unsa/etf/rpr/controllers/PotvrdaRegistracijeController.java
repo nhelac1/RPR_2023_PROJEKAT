@@ -12,7 +12,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
-
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora potvrde korisnikove registracije
+ *
+ * @author Nedzla
+ */
 public class PotvrdaRegistracijeController {
     public Button btnZatvori;
 
