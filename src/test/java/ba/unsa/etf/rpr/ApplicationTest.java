@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr;
 
+import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Korisnik;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ApplicationTest {
     Korisnik k1 = new Korisnik(1, "Nedžla", "Helać", "Zmaja od Bosne bb", "nedzlah@gmail.com", "12345678");
     Korisnik k2 = new Korisnik();
+    Kategorija k3 = new Kategorija("Kreme za lice");
+    Kategorija k4 = new Kategorija("Krema za lice");
     @Test
     public void Test1() {
         assertAll(
@@ -37,6 +40,8 @@ public class ApplicationTest {
     }
     @Test
     public void Test4() {
+        assertEquals("Kreme za lice", k3.getIme());
+        assertTrue(k3.equals(k4));
 
     }
     @Test
