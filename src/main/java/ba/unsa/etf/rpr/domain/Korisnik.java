@@ -2,6 +2,10 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
+/**
+ * Klasa za registrovane korisnike
+ * @author Nedzla
+ */
 public class Korisnik implements Idable {
     private int id;
     private String ime;
@@ -10,6 +14,15 @@ public class Korisnik implements Idable {
     private String email;
     private String password;
 
+    /**
+     * Konstruktor sa svim parametrima
+     * @param id
+     * @param ime
+     * @param prezime
+     * @param adresa
+     * @param email
+     * @param password
+     */
     public Korisnik(int id, String ime, String prezime, String adresa, String email, String password) {
         this.id = id;
         this.ime = ime;
@@ -19,9 +32,15 @@ public class Korisnik implements Idable {
         this.password = password;
     }
 
+    /**
+     * Konstruktor bez parametara
+     */
     public Korisnik() {
     }
 
+    /**
+     * Getter i setter id-a korisnika
+     */
     public int getId() {
         return id;
     }
@@ -30,6 +49,9 @@ public class Korisnik implements Idable {
         this.id = id;
     }
 
+    /**
+     * Getter i setter imena korisnika
+     */
     public String getIme() {
         return ime;
     }
@@ -38,6 +60,9 @@ public class Korisnik implements Idable {
         this.ime = ime;
     }
 
+    /**
+     * Getter i setter za prezime korisnika
+     */
     public String getPrezime() {
         return prezime;
     }
@@ -46,6 +71,9 @@ public class Korisnik implements Idable {
         this.prezime = prezime;
     }
 
+    /**
+     * Getter i setter za adresu korisnika
+     */
     public String getAdresa() {
         return adresa;
     }
@@ -54,6 +82,9 @@ public class Korisnik implements Idable {
         this.adresa = adresa;
     }
 
+    /**
+     * Getter i setter za email korisnika
+     */
     public String getEmail() {
         return email;
     }
@@ -62,6 +93,9 @@ public class Korisnik implements Idable {
         this.email = email;
     }
 
+    /**
+     * Getter i setter za password korisnika
+     */
     public String getPassword() {
         return password;
     }
@@ -70,6 +104,10 @@ public class Korisnik implements Idable {
         this.password = password;
     }
 
+    /**
+     * Metoda za vraćanje stringa za ispis korisnika
+     * @return string
+     */
     @Override
     public String toString() {
         return "Korisnik {" +

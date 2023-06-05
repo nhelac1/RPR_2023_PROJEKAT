@@ -79,7 +79,7 @@ public class Kategorija implements Idable{
     /**
      * Poredjenje dvije kategorije
      * @param o - kategorija sa kojom se poredi
-     * @return true ili false 
+     * @return true ili false
      */
     @Override
     public boolean equals(Object o) {
