@@ -204,21 +204,7 @@ public class ProizvodiController {
         }
     }
 
-    public void actionOtvaranjeNarudzbi(ActionEvent actionEvent) throws IOException {
-        try {
-            Stage stage1 = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/narudzbe.fxml"));
-            MojeNarudzbeController n = new MojeNarudzbeController();
-            fxmlLoader.setController(n);
-            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
-            stage1.setTitle("Moje CeraVe narudžbe");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+
     public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
         try {
             /*Stage stage =(Stage)btnONama.getScene().getWindow();
