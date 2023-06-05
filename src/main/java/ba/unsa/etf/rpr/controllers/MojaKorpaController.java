@@ -21,6 +21,11 @@ import java.util.List;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora korisnikove korpe
+ *
+ * @author Nedzla
+ */
 public class MojaKorpaController {
     public Button btnOdjava, btnZatvori, btnNaruci;
     public Label idLabel1, idLabel2, idLabel3, idLabel10;
@@ -75,6 +80,11 @@ public class MojaKorpaController {
         }
     }
 
+    /**
+     * Događaj za odjavlivanje iz aplikacije, te mogućnosti ponovne prijave
+     *
+     * @param actionEvent
+     */
     public void actionOdjaviSe(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage =(Stage)btnOdjava.getScene().getWindow();
@@ -100,6 +110,11 @@ public class MojaKorpaController {
         stage.close();
     }
 
+    /**
+     * Događaj za brisanje dodanog proizvoda u korpu
+     *
+     * @param actionEvent
+     */
     public void actionBrisanjeIzKorpe(ActionEvent actionEvent) {
 
         ProizvodiController.selektovaniProizvod = null;
@@ -109,6 +124,10 @@ public class MojaKorpaController {
 
     }
 
+    /**
+     * Metoda za bilježenje narudžbe ukoliko se korisnik odluči da neki proizvod poruči
+     *
+     */
     public void zabiljeziNarudzbu() throws CeraVeException {
         Model model = Model.getInstance();
         Narudzba narudzba = new Narudzba();

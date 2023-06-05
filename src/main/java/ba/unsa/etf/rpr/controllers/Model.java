@@ -5,7 +5,7 @@ import ba.unsa.etf.rpr.domain.*;
 /**
  * Klasa za pohranjivanje trenutnog stanja aplikacije
  *
- * @author 
+ * @author
  */
 public class Model {
     private static Model instance;
