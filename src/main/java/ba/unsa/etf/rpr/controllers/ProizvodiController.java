@@ -40,7 +40,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
-
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora sa prikazom CeraVe proizvoda
+ *
+ * @author Nedzla
+ */
 public class ProizvodiController {
     public Button btnOdjava, btnDodaj;
     public Label idLabelSelektovanje;
@@ -101,6 +105,9 @@ public class ProizvodiController {
 
         prikaziProizvode();
 
+        /**
+         * Metoda za provjeru da li je ijedan proizvod selektovan za dodavanje istog u korpu
+         */
         btnDodaj.setOnAction(event -> {
             Proizvod selektovani1 = idPrikaz1.getSelectionModel().getSelectedItem();
             Proizvod selektovani2 = idPrikaz2.getSelectionModel().getSelectedItem();
@@ -131,6 +138,11 @@ public class ProizvodiController {
         });
 
     }
+
+    /**
+     * Metoda za prikaz texta u TableView u wrap obliku, kako bi čitav naziv, namjena i cijena bili vidljivi korisniku
+     * @param column
+     */
     void viselinijskiPrikaz(TableColumn<Proizvod, String> column) {
         column.setCellFactory(col -> {
             return new TableCell<Proizvod, String>() {
