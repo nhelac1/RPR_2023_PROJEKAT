@@ -5,7 +5,11 @@ import ba.unsa.etf.rpr.domain.Narudzba;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.util.List;
-
+/**
+ * Sloj biznis logike za upravljanje narudzbama
+ *
+ * @author Nedzla
+ */
 public class NarudzbaManager {
 
     public Narudzba dodajNarudzbu(Narudzba n) throws CeraVeException {
