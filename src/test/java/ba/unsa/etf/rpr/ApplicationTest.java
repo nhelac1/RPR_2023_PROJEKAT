@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ApplicationTest {
     Korisnik k1 = new Korisnik(1, "Nedžla", "Helać", "Zmaja od Bosne bb", "nedzlah@gmail.com", "12345678");
-
+    Korisnik k2 = new Korisnik();
     @Test
     public void Test1() {
         assertAll(
@@ -20,7 +20,16 @@ public class ApplicationTest {
     }
     @Test
     public void Test2() {
-
+        k2.setIme("Nejla");
+        assertEquals("Nejla", k2.getIme());
+        k2.setPrezime("Helać");
+        assertEquals("Helać", k2.getPrezime());
+        k2.setAdresa("Zmaja od Bosne bbb");
+        assertEquals("Zmaja od Bosne bbb", k2.getAdresa());
+        k2.setEmail("nejla@gmail.com");
+        assertNotEquals("nejlaa@gmail.com", k2.getEmail());
+        k2.setPassword("ababababab");
+        assertNotEquals("babababa", k2.getPassword());
     }
     @Test
     public void Test3() {
