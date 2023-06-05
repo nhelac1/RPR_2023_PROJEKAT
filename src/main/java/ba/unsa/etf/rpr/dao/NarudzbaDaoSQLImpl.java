@@ -6,7 +6,10 @@ import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import java.sql.ResultSet;
 import java.util.Map;
 import java.util.TreeMap;
-
+/**
+ * MySQL implementacija
+ * @author Nedzla
+ */
 public class NarudzbaDaoSQLImpl extends AbstractDao<Narudzba> implements NarudzbaDao {
     private static NarudzbaDaoSQLImpl instance = null;
     public NarudzbaDaoSQLImpl() {

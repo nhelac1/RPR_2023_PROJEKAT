@@ -8,6 +8,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * MySQL implementacija
+ * @author Nedzla
+ */
 public class NarudzbaProizvodDaoSQLImpl extends AbstractDao<NarudzbaProizvod> implements NarudzbaProizvodDao {
 
     private static NarudzbaProizvodDaoSQLImpl instance = null;
