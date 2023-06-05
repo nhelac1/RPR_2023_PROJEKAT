@@ -20,7 +20,9 @@ public class ApplicationTest {
     Korisnik k2 = new Korisnik();
     Kategorija k3 = new Kategorija("Kreme za lice");
     Kategorija k4 = new Kategorija("Krema za lice");
-    Proizvod p1 = new Proizvod("Facial Moisturising Lotion", "Hidratantna krema za lice, 52ml", "28.20 KM");
+    Kategorija k5 = new Kategorija(1, "Krema za lice");
+    Proizvod p1 = new Proizvod(1, "Facial Moisturising Lotion", "Hidratantna krema za lice, 52ml", "28.20 KM", k3);
+    Proizvod p2 = new Proizvod(7, "Facial Moisturising Lotion22", "Hidratantna krema za lice, 52ml", "28.20 KM", k5);
 
     @Test
     public void Test1() {
@@ -58,10 +60,14 @@ public class ApplicationTest {
     }
     @Test
     public void Test5() throws CeraVeException {
-        ProizvodManager proizvodManager = mock(ProizvodManager.class);
-        List<Proizvod> sviProizvodi = Arrays.asList(p1);
-        when(proizvodManager.dajSveProizvode()).thenReturn(sviProizvodi);
-        assertTrue(proizvodManager.dajSveProizvode().contains(p1));
+        ProizvodManager proizvodManager = new ProizvodManager();
+
+        assertAll(
+                () -> assertTrue(proizvodManager.dajSveProizvode().contains(p1)),
+                () -> assertEquals(p1, proizvodManager.dajProizvodPoID(1)),
+                () -> assertEquals("Facial Moisturising Lotion22", proizvodManager.dodajProizvod(p2).getIme())
+
+        );
 
     }
     @Test

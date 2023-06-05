@@ -9,6 +9,11 @@ public class Kategorija implements Idable{
         this.ime = ime;
     }
 
+    public Kategorija(int id, String ime) {
+        this.id = id;
+        this.ime = ime;
+    }
+
     public Kategorija() {
     }
 
