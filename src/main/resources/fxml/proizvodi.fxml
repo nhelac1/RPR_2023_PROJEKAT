@@ -144,7 +144,7 @@
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="btnNarudzbe" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="Moje narudžbe" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <Button fx:id="btnNarudzbe" mnemonicParsing="false" onAction="#actionOtvaranjeNarudzbi" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="Moje narudžbe" textFill="#10006c" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <GridPane.margin>
                   <Insets bottom="10.0" />
                </GridPane.margin>
