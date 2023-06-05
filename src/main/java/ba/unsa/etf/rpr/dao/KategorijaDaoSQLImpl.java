@@ -47,6 +47,12 @@ public class KategorijaDaoSQLImpl extends AbstractDao<Kategorija> implements Kat
         return red;
     }
 
+    /**
+     * Metoda za pronalazak kategorije sa proslijedjenim imenom
+     * @param ime
+     * @return sve kategorije sa tim imenom
+     * @throws CeraVeException
+     */
     @Override
     public List<Kategorija> pronadjiKategorijuPoID(String ime) throws CeraVeException {
         return executeQuery("SELECT * FROM Kategorija WHERE ime = ?", new Object[]{ime});
