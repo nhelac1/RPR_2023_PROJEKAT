@@ -4,7 +4,11 @@ import ba.unsa.etf.rpr.domain.Idable;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import java.sql.*;
 import java.util.*;
-
+/**
+ * Apstraktna klasa koja implementira DAO metode za svaki entitet
+ *
+ * @author Dino Keco
+ */
 public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     private static Connection connection = null;
     private String tableName;
