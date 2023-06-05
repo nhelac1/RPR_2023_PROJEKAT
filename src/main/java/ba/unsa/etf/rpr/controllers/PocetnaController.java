@@ -22,6 +22,11 @@ import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora koji se otvori kada se aplikacija pokrene
+ *
+ * @author Nedzla
+ */
 public class PocetnaController {
     public Button btnRegistracija, btnPrijava;
     public TextField idEmail;
@@ -71,6 +76,12 @@ public class PocetnaController {
         }
 
     }
+
+    /**
+     * Otvaranje prozora za registraciju ukoliko korisnik nema račun na aplikaciji
+     * @param actionEvent
+     * @throws IOException
+     */
     public void actionRegistracija(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage =(Stage)btnRegistracija.getScene().getWindow();
@@ -89,6 +100,11 @@ public class PocetnaController {
         }
     }
 
+    /**
+     * Događaj za otvaranje prozora za pomoć
+     *
+     * @param actionEvent
+     */
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage1 = new Stage();
@@ -105,6 +121,11 @@ public class PocetnaController {
         }
     }
 
+    /**
+     * Događaj za otvaranje prozora za više informacija
+     *
+     * @param actionEvent
+     */
     public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
         try {
             /*Stage stage =(Stage)btnONama.getScene().getWindow();
