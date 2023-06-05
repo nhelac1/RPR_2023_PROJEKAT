@@ -7,7 +7,11 @@ import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.util.List;
-
+/**
+ * Sloj biznis logike za upravljanje proizvodima
+ *
+ * @author Nedzla
+ */
 public class ProizvodManager {
     public List<Proizvod> dajSveProizvode() throws CeraVeException {
         return DaoFactory.proizvodDao().getAll();
