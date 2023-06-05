@@ -1,7 +1,6 @@
 # CeraVe Online Prodaja 2023RPR
 
-Projekat je rađen na predmetu "Razvoj programskih rješenja 2022/2023" i bit će zasnovan na prodaji kozmetike za lice i tijelo određenog brenda - CeraVe. 
-Korisnici će moći uraditi login kao i registraciju, te naručiti željeni proizvod. Za potrebe ovog projekta, bit će predstavljeni proizvodi brenda CeraVe za njegu kože, lica i tijela.
+Projekat je rađen na predmetu "Razvoj programskih rješenja 2022/2023" na Elektrotehničkom fakultetu Univerziteta u Sarajevu i zasnovan je na prodaji kozmetike za lice i tijelo brenda - CeraVe. Korisnici kroz ovu aplikaciju mogu uraditi kako prijavu, tako i registraciju, te naručiti željeni proizvod što će biti prikazano i objašnjeno u nastavku kroz nekoliko slika.
 
 ## Prozor za prijavu na aplikaciju
 ![image](https://github.com/nhelac1/RPR_2023_PROJEKAT/assets/92544330/aeee6cbe-7ed4-400d-9ecf-49e9a39b1547)
