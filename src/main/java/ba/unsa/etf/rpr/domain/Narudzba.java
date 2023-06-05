@@ -2,6 +2,10 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
+/**
+ * Klasa za narucene narudzbe
+ * @author Nedzla
+ */
 public class Narudzba implements Idable{
     private int id;
     private String cijena;

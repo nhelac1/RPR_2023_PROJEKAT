@@ -6,11 +6,13 @@ import ba.unsa.etf.rpr.domain.Korisnik;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import javafx.event.ActionEvent;
@@ -59,6 +61,7 @@ public class PocetnaController {
 
         if (brojac == 0 && brojac1 != 0) {
             try {
+
                 Stage stage =(Stage)btnPrijava.getScene().getWindow();
                 stage.close();
                 Stage stage1 = new Stage();
