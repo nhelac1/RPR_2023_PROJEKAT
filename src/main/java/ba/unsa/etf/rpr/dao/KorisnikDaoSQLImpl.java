@@ -10,7 +10,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 import java.util.TreeMap;
-
+/**
+ * MySQL implementacija
+ * @author Nedzla
+ */
 public class KorisnikDaoSQLImpl extends AbstractDao<Korisnik> implements KorisnikDao {
     private static  KorisnikDaoSQLImpl instance = null;
 
@@ -46,6 +49,11 @@ public class KorisnikDaoSQLImpl extends AbstractDao<Korisnik> implements Korisni
         }
     }
 
+    /**
+     *
+     * @param object - objekat iz tabele Korisnik
+     * @return item - prikaz objekta
+     */
     @Override
     public Map<String, Object> object2row(Korisnik object) {
 
@@ -59,6 +67,12 @@ public class KorisnikDaoSQLImpl extends AbstractDao<Korisnik> implements Korisni
         return item;
     }
 
+    /**
+     * Metoda za provjeru da li postoji korisnik sa proslijeđenim emailom
+     * @param email
+     * @return objekat tipa Korisnik sa tim emailom
+     * @throws CeraVeException
+     */
     @Override
     public Korisnik pronadjiEmail(String email) throws CeraVeException {
         String insert = "SELECT id FROM Korisnik WHERE email='" + email +"'";
