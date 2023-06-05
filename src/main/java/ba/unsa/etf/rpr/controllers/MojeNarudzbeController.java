@@ -14,8 +14,13 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MojeNarudzbeController {
+    public Button btnZatvori;
 
-
+    public void actionZatvori(ActionEvent actionEvent)
+    {
+        Stage stage =(Stage)btnZatvori.getScene().getWindow();
+        stage.close();
+    }
     @FXML
     public void promjenaBoje(MouseEvent event) {
         Button btn = (Button) event.getSource();
