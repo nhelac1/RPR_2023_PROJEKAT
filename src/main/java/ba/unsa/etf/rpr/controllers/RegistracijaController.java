@@ -25,7 +25,11 @@ import java.util.Objects;
 import java.util.Properties;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
-
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora za registrovanje novog korisnika
+ *
+ * @author Nedzla
+ */
 public class RegistracijaController {
 
     public Button btnOtkazi, btnRegistracija, btnZatvori;
