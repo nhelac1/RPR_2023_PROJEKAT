@@ -12,7 +12,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
-
+/**
+ * JavaFX controller za kreiranje i izmjenu prozora za pomoć korisniku
+ *
+ * @author Nedzla
+ */
 public class HelpController {
     public Button btnZatvori, btnONama;
 
@@ -33,17 +37,32 @@ public class HelpController {
             System.out.println(e.getMessage());
         }
     }
+    /**
+     * Događaj za zatvaranje prozora
+     *
+     * @param actionEvent
+     */
     public void actionZatvori(ActionEvent actionEvent)
     {
         Stage stage =(Stage)btnZatvori.getScene().getWindow();
         stage.close();
     }
+
+    /**
+     * Događaj za promjenu boje prelaskom miša preko button-a
+     *
+     * @param event
+     */
     @FXML
     public void promjenaBoje(MouseEvent event) {
         Button btn = (Button) event.getSource();
         btn.setStyle("-fx-background-color: rgb(196,196,196); -fx-background-radius:10px;");
     }
-
+    /**
+     * Događaj za vraćanje stare boje button-a kada miš nije na button-u
+     *
+     * @param event
+     */
     @FXML
     public void vracanjeBoje(MouseEvent event) {
         Button btn = (Button) event.getSource();
