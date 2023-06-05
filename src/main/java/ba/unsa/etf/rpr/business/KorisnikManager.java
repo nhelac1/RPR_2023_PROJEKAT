@@ -6,7 +6,11 @@ import ba.unsa.etf.rpr.domain.Korisnik;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.util.List;
-
+/**
+ * Sloj biznis logike za upravljanje korisnicima
+ *
+ * @author Nedzla
+ */
 public class KorisnikManager {
 
     public static Korisnik pronadjiEmail(String email) throws CeraVeException {
