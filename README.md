@@ -1,6 +1,6 @@
 # CeraVe Online Prodaja 2023RPR
 
-Projekat je rađen na predmetu "Razvoj programskih rješenja 2022/2023" na Elektrotehničkom fakultetu Univerziteta u Sarajevu i zasnovan je na prodaji kozmetike za lice i tijelo brenda - CeraVe. Korisnici kroz ovu aplikaciju mogu uraditi kako prijavu, tako i registraciju, te naručiti željeni proizvod što će biti prikazano i objašnjeno u nastavku kroz nekoliko slika.
+Projekat je rađen na predmetu "Razvoj programskih rješenja 2022/2023" na Elektrotehničkom fakultetu Univerziteta u Sarajevu, u okruženju **IntelliJ IDEA 2021.2.2**  i zasnovan je na prodaji kozmetike za lice i tijelo brenda - CeraVe. Korisnici kroz ovu aplikaciju mogu uraditi kako prijavu, tako i registraciju, te naručiti željeni proizvod što će biti prikazano i objašnjeno u nastavku kroz nekoliko slika.
 
 ## Prozor za prijavu na aplikaciju
 ![image](https://github.com/nhelac1/RPR_2023_PROJEKAT/assets/92544330/aeee6cbe-7ed4-400d-9ecf-49e9a39b1547)
@@ -33,4 +33,10 @@ Projekat je rađen na predmetu "Razvoj programskih rješenja 2022/2023" na Elekt
 
 ## Prozor za pomoć korisnicima
 ![image](https://github.com/nhelac1/RPR_2023_PROJEKAT/assets/92544330/51fe422c-98ea-4693-add2-cd153e83a9a3)
+_____________________________________________________________________________________________________________________________________________________________
+Ime i prezime: **Helać Nedžla**
+
+Datum: **6.6.2023.**
+
+E-mail: **nhelac1@etf.unsa.ba**
 
