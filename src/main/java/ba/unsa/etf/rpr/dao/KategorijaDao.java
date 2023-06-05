@@ -7,6 +7,11 @@ import java.util.Map;
 import java.util.TreeMap;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
+/**
+ * DAO interfejs za objekat Kategorija
+ *
+ * @author Nedzla 
+ */
 public interface KategorijaDao extends Dao<Kategorija> {
     List<Kategorija> pronadjiKategorijuPoID(String ime) throws CeraVeException;
 
