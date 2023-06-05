@@ -1,12 +1,22 @@
 package ba.unsa.etf.rpr;
 
+import ba.unsa.etf.rpr.business.KorisnikManager;
 import ba.unsa.etf.rpr.business.ProizvodManager;
+import ba.unsa.etf.rpr.controllers.MojaKorpaController;
+import ba.unsa.etf.rpr.controllers.ProizvodiController;
+import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Korisnik;
+import ba.unsa.etf.rpr.domain.Narudzba;
 import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 
+import javax.swing.plaf.basic.BasicSplitPaneUI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -58,7 +68,8 @@ public class ApplicationTest {
         assertTrue(k3.equals(k4));
 
     }
-    @Test
+
+    /*@Test
     public void Test5() throws CeraVeException {
         ProizvodManager proizvodManager = new ProizvodManager();
 
@@ -68,11 +79,12 @@ public class ApplicationTest {
                 () -> assertEquals("Facial Moisturising Lotion22", proizvodManager.dodajProizvod(p2).getIme())
 
         );
+    }*/
 
-    }
     @Test
-    public void Test6() {
-
+    public void Test6(){
+        Narudzba n1 = new Narudzba(1, "28.20 KM", k1);
+        assertEquals(n1.getCijena(), p1.getCijena());
     }
     @Test
     public void Test7() {

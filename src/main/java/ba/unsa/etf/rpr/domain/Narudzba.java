@@ -7,6 +7,15 @@ public class Narudzba implements Idable{
     private String cijena;
     private Korisnik korisnik;
 
+    public Narudzba(int id, String cijena, Korisnik korisnik) {
+        this.id = id;
+        this.cijena = cijena;
+        this.korisnik = korisnik;
+    }
+
+    public Narudzba() {
+    }
+
     public int getId() {
         return id;
     }
