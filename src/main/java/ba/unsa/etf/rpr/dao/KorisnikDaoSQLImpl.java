@@ -20,6 +20,13 @@ public class KorisnikDaoSQLImpl extends AbstractDao<Korisnik> implements Korisni
     public KorisnikDaoSQLImpl() {
         super("Korisnik");
     }
+
+    /**
+     *
+     * @return KorisnikDAOSQLImpl
+     * Za CRUD operacije (stvaranje, čitanje, ažuriranje i brisanje) nad tabelom "Korisnik" nije potrebno
+     * više od jednog objekta, te zbog toga se koristi Singleton Pattern
+     */
     public static KorisnikDaoSQLImpl getInstance()
     {
         if(instance == null)

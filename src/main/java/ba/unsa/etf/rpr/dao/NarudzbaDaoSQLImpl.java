@@ -16,6 +16,12 @@ public class NarudzbaDaoSQLImpl extends AbstractDao<Narudzba> implements Narudzb
         super("Narudzba");
     }
 
+    /**
+     *
+     * @return KorisnikDAOSQLImpl
+     * Za CRUD operacije (stvaranje, čitanje, ažuriranje i brisanje) nad tabelom "Narudzba" nije potrebno
+     * više od jednog objekta, te zbog toga se koristi Singleton Pattern
+     */
     public static NarudzbaDaoSQLImpl getInstance()
     {
         if(instance == null)

@@ -16,6 +16,12 @@ public class ProizvodDaoSQLImpl extends AbstractDao<Proizvod> implements Proizvo
     public ProizvodDaoSQLImpl() {
         super("Proizvod");
     }
+    /**
+     *
+     * @return KorisnikDAOSQLImpl
+     * Za CRUD operacije (stvaranje, čitanje, ažuriranje i brisanje) nad tabelom "Proizvod" nije potrebno
+     * više od jednog objekta, te zbog toga se koristi Singleton Pattern
+     */
     public static ProizvodDaoSQLImpl getInstance() {
         if(instance == null)
             instance = new ProizvodDaoSQLImpl();

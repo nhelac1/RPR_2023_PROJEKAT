@@ -16,6 +16,13 @@ public class KategorijaDaoSQLImpl extends AbstractDao<Kategorija> implements Kat
         super("Kategorija");
     }
 
+    /**
+     *
+     * @return KorisnikDAOSQLImpl
+     * Za CRUD operacije (stvaranje, čitanje, ažuriranje i brisanje) nad tabelom "Kategorija" nije potrebno
+     * više od jednog objekta, te zbog toga se koristi Singleton Pattern
+     */
+
     public static KategorijaDaoSQLImpl getInstance() {
         if (instance == null)
             instance = new KategorijaDaoSQLImpl();
