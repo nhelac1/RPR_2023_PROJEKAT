@@ -8,8 +8,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * HelloAplication je namijenjena za pokretanje aplikacije JavaFX UI koristeći FXML
+ * @author Nedzla
+ */
+
 public class HelloApplication extends Application {
 
+    /**
+     * Metoda start se poziva pri pokretanju aplikacije
+     * @param stage
+     * @throws IOException - ukoliko FXML file(pocetna.fxml) ne moze da se učita
+     */
     @Override
     public void start(Stage stage) throws IOException {
         try {

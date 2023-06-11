@@ -19,7 +19,7 @@ public class NarudzbaProizvodDaoSQLImpl extends AbstractDao<NarudzbaProizvod> im
         super("NarudzbaProizvod");
     }
 
-    
+
     public static NarudzbaProizvodDaoSQLImpl getInstance()
     {
         if(instance == null)
