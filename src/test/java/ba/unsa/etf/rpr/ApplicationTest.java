@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr;
 
+import ba.unsa.etf.rpr.business.KategorijaManager;
 import ba.unsa.etf.rpr.business.KorisnikManager;
 import ba.unsa.etf.rpr.business.ProizvodManager;
 import ba.unsa.etf.rpr.controllers.MojaKorpaController;
@@ -87,8 +88,15 @@ public class ApplicationTest {
         assertEquals(n1.getCijena(), p1.getCijena());
     }
     @Test
-    public void Test7() {
+    public void Test7() throws CeraVeException {
+        KategorijaManager kategorijaManager = new KategorijaManager();
+        kategorijaManager.validacijaImenaKategorije("Kreme za lice");
 
+        try {
+            kategorijaManager.validacijaImenaKategorije("Lice");
+        } catch (CeraVeException ce) {
+            assertEquals("Dužina imena kategorije mora biti veća od 5 !", ce.getMessage());
+        }
     }
     @Test
     public void Test8() {
