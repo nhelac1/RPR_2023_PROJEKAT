@@ -6,16 +6,20 @@ import ba.unsa.etf.rpr.business.ProizvodManager;
 import ba.unsa.etf.rpr.controllers.MojaKorpaController;
 import ba.unsa.etf.rpr.controllers.ProizvodiController;
 import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.dao.KorisnikDao;
+import ba.unsa.etf.rpr.dao.KorisnikDaoSQLImpl;
 import ba.unsa.etf.rpr.domain.Kategorija;
 import ba.unsa.etf.rpr.domain.Korisnik;
 import ba.unsa.etf.rpr.domain.Narudzba;
 import ba.unsa.etf.rpr.domain.Proizvod;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 import javax.swing.plaf.basic.BasicSplitPaneUI;
 import java.util.ArrayList;
@@ -27,6 +31,7 @@ import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ApplicationTest {
+
     Korisnik k1 = new Korisnik(1, "Nedžla", "Helać", "Zmaja od Bosne bb", "nedzlah@gmail.com", "12345678");
     Korisnik k2 = new Korisnik();
     Kategorija k3 = new Kategorija("Kreme za lice");
@@ -46,6 +51,7 @@ public class ApplicationTest {
                 () -> assertEquals("12345678", k1.getPassword(), "Password je netačan!")
         );
     }
+
     @Test
     public void Test2() {
         k2.setIme("Nejla");
@@ -59,10 +65,12 @@ public class ApplicationTest {
         k2.setPassword("ababababab");
         assertNotEquals("babababa", k2.getPassword());
     }
+
     @Test
     public void Test3() {
         assertEquals(8, k1.getPassword().length(), "Password ne sadrži 8 znakova!");
     }
+
     @Test
     public void Test4() {
         assertEquals("Kreme za lice", k3.getIme());
@@ -87,6 +95,7 @@ public class ApplicationTest {
         Narudzba n1 = new Narudzba(1, "28.20 KM", k1);
         assertEquals(n1.getCijena(), p1.getCijena());
     }
+
     @Test
     public void Test7() throws CeraVeException {
         KategorijaManager kategorijaManager = new KategorijaManager();
@@ -96,8 +105,9 @@ public class ApplicationTest {
             assertEquals("Dužina imena kategorije mora biti veća od 5 !", ce.getMessage());
         }
     }
+
     @Test
-    public void Test8() {
+    public void Test8() throws CeraVeException {
         KorisnikManager korisnikManager = new KorisnikManager();
         try {
             korisnikManager.obrisiKorisnika(1);
@@ -106,8 +116,38 @@ public class ApplicationTest {
         }
 
     }
+
+
+
+    @Mock
+    public Korisnik korisnik = new Korisnik();
+    private KorisnikDao daoKorisnik;
+    private KorisnikDaoSQLImpl sqlKorisnik = Mockito.mock(KorisnikDaoSQLImpl.class);
+    private KorisnikManager korisnikManager = new KorisnikManager();
+    private KategorijaManager kategorijaManager = new KategorijaManager();
+
+    @BeforeEach
+    public void setUp() {
+        korisnik.setId(1);
+        korisnik.setIme("Nedžlaa");
+        korisnik.setPrezime("Helaać");
+        korisnik.setAdresa("Zmaja od Bosne 1234");
+        korisnik.setEmail("nedzla1234@gmail.com");
+        korisnik.setPassword("12344321");
+        MockitoAnnotations.openMocks(this);
+        korisnikManager = new KorisnikManager();
+        kategorijaManager = Mockito.mock(KategorijaManager.class);
+    }
     @Test
-    public void Test9() {
+    void Test9() throws CeraVeException {
+        Korisnik korisnik = new Korisnik(13, "Nedžlaa", "Helaać", "Zmaja od Bosne 1234", "nedzla1234@gmail.com","12344321");
+        MockedStatic<DaoFactory> mockedFactory = Mockito.mockStatic(DaoFactory.class);
+        mockedFactory.when(DaoFactory::korisnikDao).thenReturn(sqlKorisnik);
+        Korisnik korisnik1 = new Korisnik();
+        when(sqlKorisnik.add(Mockito.any(Korisnik.class))).thenReturn(korisnik1);
+        Korisnik korisnik2 = sqlKorisnik.add(new Korisnik());
+        assertEquals(korisnik1, korisnik2);
+        mockedFactory.close();
 
     }
     @Test
