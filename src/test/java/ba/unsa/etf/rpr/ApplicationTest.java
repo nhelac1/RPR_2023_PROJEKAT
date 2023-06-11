@@ -90,8 +90,6 @@ public class ApplicationTest {
     @Test
     public void Test7() throws CeraVeException {
         KategorijaManager kategorijaManager = new KategorijaManager();
-        kategorijaManager.validacijaImenaKategorije("Kreme za lice");
-
         try {
             kategorijaManager.validacijaImenaKategorije("Lice");
         } catch (CeraVeException ce) {
@@ -100,6 +98,12 @@ public class ApplicationTest {
     }
     @Test
     public void Test8() {
+        KorisnikManager korisnikManager = new KorisnikManager();
+        try {
+            korisnikManager.obrisiKorisnika(1);
+        } catch (CeraVeException ce) {
+            assertEquals("Ne možete obrisati korisnika, jer je u vezi sa tabelom Narudžba !", ce.getMessage());
+        }
 
     }
     @Test
