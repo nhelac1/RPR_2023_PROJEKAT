@@ -78,7 +78,7 @@ public class ApplicationTest {
 
     }
 
-    /*@Test
+    @Test
     public void Test5() throws CeraVeException {
         ProizvodManager proizvodManager = new ProizvodManager();
 
@@ -88,7 +88,7 @@ public class ApplicationTest {
                 () -> assertEquals("Facial Moisturising Lotion22", proizvodManager.dodajProizvod(p2).getIme())
 
         );
-    }*/
+    }
 
     @Test
     public void Test6(){
@@ -117,14 +117,13 @@ public class ApplicationTest {
 
     }
 
-
-
     @Mock
     public Korisnik korisnik = new Korisnik();
     private KorisnikDao daoKorisnik;
     private KorisnikDaoSQLImpl sqlKorisnik = Mockito.mock(KorisnikDaoSQLImpl.class);
     private KorisnikManager korisnikManager = new KorisnikManager();
     private KategorijaManager kategorijaManager = new KategorijaManager();
+    private ProizvodManager proizvodManager = new ProizvodManager();
 
     @BeforeEach
     public void setUp() {
@@ -137,9 +136,11 @@ public class ApplicationTest {
         MockitoAnnotations.openMocks(this);
         korisnikManager = new KorisnikManager();
         kategorijaManager = Mockito.mock(KategorijaManager.class);
+        proizvodManager = Mockito.mock(ProizvodManager.class);
     }
+
     @Test
-    void Test9() throws CeraVeException {
+    public void Test9() throws CeraVeException {
         Korisnik korisnik = new Korisnik(13, "Nedžlaa", "Helaać", "Zmaja od Bosne 1234", "nedzla1234@gmail.com","12344321");
         MockedStatic<DaoFactory> mockedFactory = Mockito.mockStatic(DaoFactory.class);
         mockedFactory.when(DaoFactory::korisnikDao).thenReturn(sqlKorisnik);
@@ -148,10 +149,13 @@ public class ApplicationTest {
         Korisnik korisnik2 = sqlKorisnik.add(new Korisnik());
         assertEquals(korisnik1, korisnik2);
         mockedFactory.close();
-
     }
-    @Test
-    public void Test10() {
 
+    @Test
+    public void Test10() throws CeraVeException {
+        Proizvod proizvod = new Proizvod(7, "Neka krema za ruke", "Namjena 1", "2000 KM", k5);
+        proizvodManager.dodajProizvod(proizvod);
+        Assertions.assertTrue(true);
+        Mockito.verify(proizvodManager).dodajProizvod(proizvod);
     }
 }
