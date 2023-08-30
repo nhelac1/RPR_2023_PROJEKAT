@@ -144,6 +144,7 @@
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Label>
+            <Button mnemonicParsing="false" onAction="#actionNarudzbe" text="Moje narudžbe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children>
         </GridPane>
     </center>

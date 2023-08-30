@@ -203,6 +203,21 @@ public class ProizvodiController {
             System.out.println(e.getMessage());
         }
     }
+    public void actionNarudzbe(ActionEvent actionEvent) throws IOException {
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/fxml/mojenarudzbe.fxml"));
+            NarudzbeController n = new NarudzbeController();
+            fxmlLoader.setController(n);
+            Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+            stage1.setTitle("Historija narudžbi");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
 
     public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {

@@ -2,8 +2,9 @@ package ba.unsa.etf.rpr.domain;
 
 public class NarudzbaProizvod implements Idable{
     private int id;
-    private Proizvod proizvod;
-    private Narudzba narudzba;
+    private Proizvod id_proizvod;
+    private Narudzba id_narudzba;
+    private String ime, cijena;
 
     public int getId() {
         return id;
@@ -14,18 +15,34 @@ public class NarudzbaProizvod implements Idable{
     }
 
     public Proizvod getProizvod() {
-        return proizvod;
+        return id_proizvod;
     }
 
     public void setProizvod(Proizvod proizvod) {
-        this.proizvod = proizvod;
+        this.id_proizvod = proizvod;
     }
 
     public Narudzba getNarudzba() {
-        return narudzba;
+        return id_narudzba;
     }
 
     public void setNarudzba(Narudzba narudzba) {
-        this.narudzba = narudzba;
+        this.id_narudzba = narudzba;
+    }
+
+    public String getIme() {
+        return id_proizvod.getIme();
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+
+    public String getCijena() {
+        return id_narudzba.getCijena();
+    }
+
+    public void setCijena(String cijena) {
+        this.cijena = cijena;
     }
 }

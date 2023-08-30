@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.domain.Narudzba;
 import ba.unsa.etf.rpr.exceptions.CeraVeException;
 
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 /**
@@ -54,5 +55,10 @@ public class NarudzbaDaoSQLImpl extends AbstractDao<Narudzba> implements Narudzb
         item.put("cijena", object.getCijena());
         item.put("id_korisnik", object.getKorisnik().getId());
         return item;
+    }
+    @Override
+    public List<Narudzba> dajNarudzbuPoID(int id) throws CeraVeException {
+
+        return executeQuery("SELECT * FROM Narudzba, Proizvod WHERE id_korisnik = ?", new Object[]{id});
     }
 }

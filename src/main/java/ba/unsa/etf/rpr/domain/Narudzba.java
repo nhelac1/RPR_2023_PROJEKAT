@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.domain;
 
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Klasa za narucene narudzbe
@@ -9,12 +9,15 @@ import java.util.Objects;
 public class Narudzba implements Idable{
     private int id;
     private String cijena;
-    private Korisnik korisnik;
+    private Korisnik id_korisnik;
+    private Proizvod proizvod;
+
+
 
     public Narudzba(int id, String cijena, Korisnik korisnik) {
         this.id = id;
         this.cijena = cijena;
-        this.korisnik = korisnik;
+        this.id_korisnik = korisnik;
     }
 
     public Narudzba() {
@@ -37,11 +40,11 @@ public class Narudzba implements Idable{
     }
 
     public Korisnik getKorisnik() {
-        return korisnik;
+        return id_korisnik;
     }
 
     public void setKorisnik(Korisnik korisnik) {
-        this.korisnik = korisnik;
+        this.id_korisnik = korisnik;
     }
 
     @Override
@@ -49,7 +52,7 @@ public class Narudzba implements Idable{
         return "Narudzba {" +
                 "id = " + id +
                 ", cijena = " + cijena +
-                ", korisnik = " + korisnik +
+                ", korisnik = " + id_korisnik +
                 '}';
     }
 
@@ -63,7 +66,7 @@ public class Narudzba implements Idable{
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cijena, korisnik);
+        return Objects.hash(id, cijena, id_korisnik);
     }
 
 }

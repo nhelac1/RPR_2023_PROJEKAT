@@ -19,4 +19,9 @@ public class NarudzbaManager {
     public List<Narudzba> dajSveNarudzbe() throws CeraVeException {
         return DaoFactory.narudzbaDao().getAll();
     }
+    public List<Narudzba> dajNarudzbuPoID(int id) throws CeraVeException {
+        return DaoFactory.narudzbaDao().dajNarudzbuPoID(id);
+    }
+
+
 }
